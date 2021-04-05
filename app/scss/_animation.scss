@@ -8,3 +8,36 @@
         transform: translateY(-100%);
     }
 }
+
+// Subtitle Roll
+@keyframes subtitle-roll {
+    0%{
+        margin-top: -60px;
+
+    }
+    5%{
+        margin-top: -40px;
+  
+    }
+    33%{
+        margin-top: -40px;
+
+    }
+    38%{
+        margin-top: -20px;
+
+    }
+    66%{
+        margin-top: -20px;
+ 
+    }
+    71%{
+        margin-top: 0px;
+    }
+    99.99%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: -60px;
+    }
+}

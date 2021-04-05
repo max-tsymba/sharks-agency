@@ -13,11 +13,15 @@
 
 // header bg
 .header {
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
+
+
 
 // hamburger btn
 .hamburger__menu {
@@ -99,6 +103,69 @@
     }
 }
 
+// Header Content
+.header__content{
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.header__title{
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    line-height: 120px;
+    text-transform: uppercase;
+    padding-bottom: 150px;
+}
+
+.header__title-fst {
+    position: relative;
+}
+.header__title-snd{
+    padding-left: 140px;
+    position: relative;
+}
+
+.header__title-fst::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    margin-left: 20px;
+    background-color: $white;
+    top: 50%;
+}
+
+.header__title-snd::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: $white;
+    top: 50%;
+    left: 0;
+}
+
+// Subtitle Roll
+.header__subtitle{
+    font-size: 16px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    color: #f5f5f5;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.subtitle-roll{
+    animation: subtitle-roll 8s linear infinite;
+}
+
+
+.about{
+    height: 100vh;
+}
 
 @import "animation";
 @import "media";
