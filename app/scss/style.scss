@@ -9,7 +9,15 @@
     margin: 0 auto;
 }
 
-/* HEADER */ 
+/* HEADER */
+
+// header bg
+.header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 // hamburger btn
 .hamburger__menu {
@@ -23,7 +31,7 @@
 
     div {
         height: 2px;
-        background: $black;
+        background: $white;
         transition: .5s ease;
 
         &:nth-child(1) {
@@ -52,10 +60,6 @@
         }
     }
 }
-
-// .logo img{
-//     // width: 20px;
-// }
 
 // Navigation
 .top-nav{
@@ -88,7 +92,7 @@
     }
 
     &-link{
-        color: $black;
+        color: #f5f5f5;
         text-transform: uppercase;
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 700;
