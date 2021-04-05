@@ -1,0 +1,10 @@
+
+/* TEXT ROLL */
+.line-roll{
+    transition: all .3s ease-in-out;
+    height: 20px;
+    
+    &:hover{
+        transform: translateY(-100%);
+    }
+}

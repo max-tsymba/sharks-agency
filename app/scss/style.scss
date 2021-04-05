@@ -3,11 +3,15 @@
 @import "libs";
 @import "fonts";
 
+/* BASIC */
+.container {
+    max-width: 1350px; 
+    margin: 0 auto;
+}
 
 /* HEADER */ 
 
 // hamburger btn
-
 .hamburger__menu {
     width: 20px;
     height: 17px;
@@ -49,6 +53,48 @@
     }
 }
 
+// .logo img{
+//     // width: 20px;
+// }
 
-@import "keyframes";
+// Navigation
+.top-nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// menu
+.menu {
+    margin-right: 116px;
+}
+
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    
+
+    &-item{
+        font-size: 14px;
+        line-height: 20px;
+        padding-right: 36px;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    li:last-child{
+        padding-right: 0;
+    }
+
+    &-link{
+        color: $black;
+        text-transform: uppercase;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 700;
+    }
+}
+
+
+@import "animation";
 @import "media";
