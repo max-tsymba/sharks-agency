@@ -1,9 +1,53 @@
+@import "global";
 @import "vars";
 @import "libs";
 @import "fonts";
 
-// font-family: 'Roboto', sans-serif;
 
+/* HEADER */ 
+
+// hamburger btn
+
+.hamburger__menu {
+    width: 20px;
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    align-items: flex-end;
+
+    div {
+        height: 2px;
+        background: $black;
+        transition: .5s ease;
+
+        &:nth-child(1) {
+            width: 17px;
+        }
+        &:nth-child(2) {
+            width: 20px;
+        }
+        &:nth-child(3) {
+            width: 14px;
+        }
+    }
+}
+
+.hamburger__menu:hover {
+
+    div{
+        &:nth-child(1) {
+            width: 20px;
+        }
+        &:nth-child(2) {
+            width: 20px;
+        }
+        &:nth-child(3) {
+            width: 20px;
+        }
+    }
+}
 
 
 @import "keyframes";
