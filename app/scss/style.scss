@@ -107,7 +107,7 @@
 .header__content{
     max-width: 960px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .header__title{
@@ -116,7 +116,7 @@
     letter-spacing: 5px;
     line-height: 120px;
     text-transform: uppercase;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
 }
 
 .header__title-fst {
@@ -162,6 +162,49 @@
     animation: subtitle-roll 8s linear infinite;
 }
 
+// Down Content
+.header__down{
+    position: absolute;
+    width: 1350px; 
+    margin: 0 auto;
+    bottom: 50px;
+    overflow: hidden;
+}
+
+// Arrow
+.arrow{
+    position: relative;
+    width: 2px;
+    height: 50px;
+    background-color: $white;
+    left: 50%;
+    top: 0;
+    animation: arrow-down 2s linear infinite;
+}
+
+// Socail Links
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-links{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    height: 14px;
+    overflow: hidden;
+    a {
+        font-size: 12px;  
+        line-height: 14px;  
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-left: 36px;
+        color: $white;
+    }
+}
 
 .about{
     height: 100vh;

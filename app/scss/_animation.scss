@@ -9,7 +9,16 @@
     }
 }
 
-// Subtitle Roll
+.line-roll.social{
+    transition: all .3s ease-in-out;
+    height: 14px;
+    
+    &:hover{
+        transform: translateY(-100%);
+    }
+}
+
+/* Subtitle Roll */
 @keyframes subtitle-roll {
     0%{
         margin-top: -60px;
@@ -40,4 +49,22 @@
     100%{
         margin-top: -60px;
     }
+}
+
+/* Line down */
+@keyframes arrow-down{
+    0%{
+        transform: translateY(-50px);
+
+    }
+    40%{
+        transform: translateY(+0px);
+    }
+    60%{
+        transform: translateY(+20px);
+    }
+    100%{
+        transform: translateY(+100px);
+    }
+
 }
