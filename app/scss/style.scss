@@ -16,6 +16,7 @@
 
 /* HEADER */
 
+
 #fullpage{
     min-height: 100vh;
     position: relative;
@@ -23,8 +24,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative;
 }
+
 
 // header bg
 .header {
@@ -281,6 +282,12 @@
 
 // Wave Background
 .wave{
+
+    img{
+        position: absolute;
+        bottom: 0;
+    }
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -304,7 +311,8 @@
 }
 
 // Title
-.services__title{
+.block__title{
+    color: $black;
     font-size: 48px;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
@@ -328,14 +336,13 @@
 }
 
 // Content
-
 .services__content{
 
     &-items{
-        margin-top: 80px;
         display: flex;
         justify-content: space-between;
         text-align: center;
+        padding-top: 80px;
     }
 
     &-item{
@@ -360,6 +367,113 @@
         font-size: 16px;
     }
 }
+
+/* TEAM SECTION */
+
+.team{
+    height: 100vh;
+    color: $black;
+}
+
+// Content
+.team__content-item {
+    max-width: 360px;
+    text-align: center;
+}
+
+.team__content-slider{
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team__item{
+
+    &-image{
+        position: relative;
+        img{
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    &-name{
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &-info{
+        font-size: 16px;
+        min-height: 90px;
+        padding-bottom: 15px;
+    }
+
+    &-bookBtn{
+        span{
+            position: relative;
+            z-index: 1;
+            color: $white;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        position: relative;
+        background-color: transparent;
+        padding: 8px 30px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        transition-duration: .3s;
+
+        &:hover{
+            background-color: $black;
+            color: $white;
+
+            div{
+                top: -120px;
+            }
+        }
+    }
+}
+
+// Wave Button's Fill
+.liquid{
+    position: absolute;
+    left: 0;
+    top: -80px;
+    width: 200px;
+    height: 200px;
+    background: $black-bg;
+    transition: .5s;
+
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -75%);
+        animation: waterBtn 5s linear infinite;
+    }
+
+    &::after{
+        border-radius: 45%;
+        background: rgba(30, 30, 30, 1);
+    }
+
+    &::before{
+        border-radius: 40%;
+        background: rgba(27, 27, 27, 1);
+    }
+}
+
 
 @import "animation";
 @import "media";

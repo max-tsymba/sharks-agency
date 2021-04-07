@@ -1,5 +1,5 @@
 
-/* TEXT ROLL */
+/* Text Roll */
 .line-roll{
     transition: all .3s ease-in-out;
     height: 20px;
@@ -72,7 +72,7 @@
 
 }
 
-// Title Animation
+/* Title Animation */
 @keyframes leftTitle{
     from{
         left: -100%;
@@ -110,7 +110,7 @@
 }
 
 
-// Title Line Animation
+/*Title Line Animation*/
 @keyframes fstLine{
     from{
         width: 0;
@@ -126,5 +126,15 @@
     }
     to{
         width: 120px;
+    }
+}
+
+/* Wave Button Animation */
+@keyframes waterBtn{
+    0%{
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -75%) rotate(360deg);
     }
 }
