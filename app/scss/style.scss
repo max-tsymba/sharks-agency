@@ -9,6 +9,11 @@
     margin: 0 auto;
 }
 
+.cont-1120 {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
 /* HEADER */
 
 // header bg
@@ -66,11 +71,23 @@
 }
 
 // Navigation
-.top-nav{
+.header__inner{
+    overflow: hidden;
     height: 100px;
+}
+
+.header__nav{
+    top: -100%;
+    animation: topNav 2s forwards 2s;
+}
+
+.top-nav{
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
+    width: 1350px;
 }
 
 // menu
@@ -81,7 +98,6 @@
 .menu__list{
     display: flex;
     justify-content: space-between;
-    
 
     &-item{
         font-size: 14px;
@@ -108,6 +124,7 @@
     max-width: 960px;
     margin: 0 auto;
     margin-top: 120px;
+    overflow: hidden;
 }
 
 .header__title{
@@ -117,35 +134,44 @@
     line-height: 120px;
     text-transform: uppercase;
     padding-bottom: 80px;
+    width: 640px;
+    overflow: hidden;
 }
 
 .header__title-fst {
     position: relative;
+    left: -100%;
+    animation: leftTitle 2s forwards 1s;
 }
 .header__title-snd{
     padding-left: 140px;
     position: relative;
+    right: -100%;
+    animation: rightTitle 2s forwards 1s;
 }
 
 .header__title-fst::after{
     content: '';
     position: absolute;
-    width: 120px;
+    width: 0px;
     height: 2px;
     margin-left: 20px;
     background-color: $white;
     top: 50%;
+    animation: fstLine 1s forwards 3s;
 }
 
 .header__title-snd::before{
     content: '';
     position: absolute;
-    width: 120px;
+    width: 0px;
     height: 2px;
     background-color: $white;
     top: 50%;
-    left: 0;
+    right: 520px;
+    animation: sndLine 1s forwards 3s;
 }
+
 
 // Subtitle Roll
 .header__subtitle{
@@ -159,7 +185,8 @@
 }
 
 .subtitle-roll{
-    animation: subtitle-roll 8s linear infinite;
+    margin-top: -100px;
+    animation: subtitle-roll 8s linear infinite forwards 4s;
 }
 
 // Down Content
@@ -169,6 +196,8 @@
     margin: 0 auto;
     bottom: 50px;
     overflow: hidden;
+    bottom: -100%;
+    animation: botNav 2s forwards 2s;
 }
 
 // Arrow
@@ -179,7 +208,8 @@
     background-color: $white;
     left: 50%;
     top: 0;
-    animation: arrow-down 2s linear infinite;
+    opacity: 0;
+    animation: arrow-down 2s linear infinite forwards 5s;
 }
 
 // Socail Links
@@ -190,7 +220,6 @@
 }
 
 .social-links{
-    position: relative;
     display: flex;
     justify-content: space-between;
     right: 0;
@@ -206,8 +235,52 @@
     }
 }
 
+
+/* ABOUT */
 .about{
     height: 100vh;
+    position: relative;
+
+    &__content-text{
+        padding-top: 100px;
+    }
+}
+
+// Content
+.content__title{
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 50px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background: $white;
+        top: 50%;
+        margin-left: 20px;
+    }
+}
+
+.content__subtitle{
+    font-size: 24px;
+    font-weight: 400;
+    width: 878px;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-repeat:no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
 }
 
 @import "animation";

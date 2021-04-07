@@ -12,7 +12,6 @@
 .line-roll.social{
     transition: all .3s ease-in-out;
     height: 14px;
-    
     &:hover{
         transform: translateY(-100%);
     }
@@ -55,16 +54,77 @@
 @keyframes arrow-down{
     0%{
         transform: translateY(-50px);
+        opacity: 1;
 
     }
     40%{
         transform: translateY(+0px);
+        opacity: 1;
     }
     60%{
         transform: translateY(+20px);
+        opacity: 1;
     }
     100%{
         transform: translateY(+100px);
+        opacity: 1;
     }
 
+}
+
+// Title Animation
+@keyframes leftTitle{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes rightTitle{
+    from{
+        right: -100%;
+    }
+    to{
+        right: 0%;
+    }
+}
+
+@keyframes topNav{
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0;
+    }
+}
+
+@keyframes botNav{
+    from{
+        bottom: -100%;
+    }
+    to{
+        bottom: 50px;
+    }
+}
+
+
+// Title Line Animation
+@keyframes fstLine{
+    from{
+        width: 0;
+    }
+    to{
+        width: 120px;
+    }
+}
+
+@keyframes sndLine{
+    from{
+        width: 0;
+    }
+    to{
+        width: 120px;
+    }
 }
