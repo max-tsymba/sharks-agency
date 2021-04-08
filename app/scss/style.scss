@@ -14,6 +14,52 @@
     margin: 0 auto;
 }
 
+/* SPLASH SCREEN */
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $black-bg;
+    transition: 1s;
+
+    &__logo{
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-elem{
+            position: relative;
+            // display: inline-block;
+            bottom: -20px;
+            opacity: 0;
+        }
+
+        &-elem.active{
+            bottom: 0;
+            opacity: 1;
+            transition: ease-in-out .5s;
+        }
+
+        &-elem.fade{
+            bottom: 150px;
+            opacity: 0;
+            transition: ease-in-out .5s;
+        }
+    }
+}
+
+
 /* HEADER */
 
 
@@ -85,7 +131,7 @@
 
 .header__nav{
     top: -100%;
-    animation: topNav 2s forwards 2s;
+    animation: topNav 2s forwards 3s;
 }
 
 .top-nav{
@@ -148,13 +194,13 @@
 .header__title-fst {
     position: relative;
     left: -100%;
-    animation: leftTitle 2s forwards 1s;
+    animation: leftTitle 2s forwards 2s;
 }
 .header__title-snd{
     padding-left: 140px;
     position: relative;
     right: -100%;
-    animation: rightTitle 2s forwards 1s;
+    animation: rightTitle 2s forwards 2s;
 }
 
 .header__title-fst::after{
@@ -165,7 +211,7 @@
     margin-left: 20px;
     background-color: $white;
     top: 50%;
-    animation: fstLine 1s forwards 3s;
+    animation: fstLine 1s forwards 4s;
 }
 
 .header__title-snd::before{
@@ -176,7 +222,7 @@
     background-color: $white;
     top: 50%;
     right: 520px;
-    animation: sndLine 1s forwards 3s;
+    animation: sndLine 1s forwards 4s;
 }
 
 
@@ -204,7 +250,7 @@
     bottom: 50px;
     overflow: hidden;
     bottom: -100%;
-    animation: botNav 2s forwards 2s;
+    animation: botNav 2s forwards 3s;
 }
 
 // Arrow
