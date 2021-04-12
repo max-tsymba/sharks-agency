@@ -9,15 +9,26 @@
   "author": "Max Tsymba",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/register": "^7.13.14",
+    "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.5",
+    "core-js": "^3.10.1",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.1",
     "gulp-uglify": "^3.0.2",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "webpack": "^4.46.0",
+    "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "node-sass": "^4.14.1",

@@ -40,7 +40,7 @@ gulp.task('html', function(){
 
 gulp.task('script', function(){
   return gulp.src('app/js/*.js')
-  .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js', function(){
