@@ -1,6 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', ()=>{
     preLoader();
+    circleText();
 });
 
 var globalId = 0;
@@ -37,12 +38,6 @@ function preLoader() {
     const itemBlock = document.querySelectorAll('.fullpage__item');
 
     setTimeout(()=>{
-
-        // block.addEventListener('wheel', ()=>{
-        //     $('html').css({overflow: 'scroll'});
-        // })
-
-
 
         logoSpan.forEach((span, idx)=>{
 
@@ -139,6 +134,20 @@ function fullPageScrolling() {
 
     WRAPPER.addEventListener('wheel', _scrollY);
 
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Circle Text
+function circleText() {
+
+    const TEXT = document.querySelector('.circle__text');
+    TEXT.innerHTML = TEXT.textContent.replace(/\S/g, "<span class='circle__span'>$&</span>");
+
+    const Element = document.querySelectorAll('.circle__span');
+
+    for(let i = 0; i<Element.length; i++) {
+        Element[i].style.transform = "rotate("+i*22+"deg)"; 
+    }
 }
 
 // MODULES-----------------------------------------------------------------------------------------------------------------

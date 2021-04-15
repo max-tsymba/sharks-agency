@@ -7,6 +7,7 @@
 .container {
     max-width: 1350px; 
     margin: 0 auto;
+    // min-height: 100vh;
 }
 
 .cont-1120 {
@@ -193,20 +194,24 @@
 
 // Header Content
 .header__content{
+    position: absolute;
+    top: 40%;
     max-width: 960px;
     margin: 0 auto;
-    margin-top: 180px;
-    // overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: hidden;
     text-align: center;
 }
 
 .header__title{
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 500;
     letter-spacing: 5px;
     line-height: 100px;
+    max-width: 960px;
     text-transform: uppercase;
-    padding-bottom: 100px;
     overflow: hidden;
 }
 
@@ -217,35 +222,13 @@
     animation: leftTitle 2s forwards 2s ease-in-out;
 }
 
-// .header__title-fst::after{
-//     content: '';
-//     position: absolute;
-//     width: 0px;
-//     height: 2px;
-//     margin-left: 20px;
-//     background-color: $white;
-//     top: 50%;
-//     animation: fstLine 1s forwards 4s ease-in-out;
-// }
-
-.header__title-snd::before{
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 2px;
-    background-color: $white;
-    top: 50%;
-    right: 520px;
-    animation: sndLine 1s forwards 4s ease-in-out;
-}
-
-
 // Subtitle Roll
 .header__subtitle{
     font-size: 16px;
     text-align: center;
     height: 20px;
     line-height: 20px;
+    margin-top: 100px;
     color: #f5f5f5;
     opacity: 1;
     overflow: hidden;
@@ -308,10 +291,65 @@
     height: 100vh;
     position: relative;
     background-color: #121212;
-    // background-color: wheat;
 
-    &__content-text{
-        padding-top: 100px;
+    &__inner {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__back {
+        position: relative;
+        span{
+            font-size: 250px;
+            font-weight: 800;
+            color: rgba($white, .02);
+        }
+    }
+
+    &__content{
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.circle__block{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+}
+
+.circle__text{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $white;
+    font-size: 14px;
+    user-select: none;
+    pointer-events: none;
+    animation: rotateText 7.5s linear infinite;
+
+    span{
+        position: absolute;
+        top: -50px;
+        text-transform: uppercase;
+        display: inline-block;
+        transform-origin: 0 50px;
+    }
+}
+
+@keyframes rotateText{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
 
@@ -324,39 +362,20 @@
     font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: 50px;
 
-    &::after{
-        content: '';
-        position: absolute;
-        width: 120px;
-        height: 2px;
-        background: $white;
-        top: 50%;
-        margin-left: 20px;
-    }
+    // &::after{
+    //     content: '';
+    //     position: absolute;
+    //     width: 120px;
+    //     height: 2px;
+    //     background: $white;
+    //     top: 50%;
+    //     margin-left: 20px;
+    // }
 }
 
 .content__subtitle{
     font-size: 20px;
     font-weight: 400;
-    width: 878px;
-}
-
-// Wave Background
-.wave{
-
-    img{
-        position: absolute;
-        bottom: 0;
-    }
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background-repeat:no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
 }
 
 /* SERVICES SECTION */
