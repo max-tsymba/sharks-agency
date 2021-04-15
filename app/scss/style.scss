@@ -110,7 +110,7 @@
     align-items: flex-end;
 
     div {
-        opacity: 0;
+        // opacity: 0;
         height: 2px;
         background: $white;
         transition: .5s ease;
@@ -195,43 +195,38 @@
 .header__content{
     max-width: 960px;
     margin: 0 auto;
-    margin-top: 120px;
-    overflow: hidden;
+    margin-top: 180px;
+    // overflow: hidden;
+    text-align: center;
 }
 
 .header__title{
-    font-size: 120px;
-    font-weight: 700;
+    font-size: 90px;
+    font-weight: 500;
     letter-spacing: 5px;
-    line-height: 120px;
+    line-height: 100px;
     text-transform: uppercase;
-    padding-bottom: 80px;
-    width: 640px;
+    padding-bottom: 100px;
     overflow: hidden;
 }
 
-.header__title-fst {
+.header__title-text {
+    padding-left: 5px;
     position: relative;
     left: -100%;
     animation: leftTitle 2s forwards 2s ease-in-out;
 }
-.header__title-snd{
-    padding-left: 140px;
-    position: relative;
-    right: -100%;
-    animation: rightTitle 2s forwards 2s ease-in-out;
-}
 
-.header__title-fst::after{
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 2px;
-    margin-left: 20px;
-    background-color: $white;
-    top: 50%;
-    animation: fstLine 1s forwards 4s ease-in-out;
-}
+// .header__title-fst::after{
+//     content: '';
+//     position: absolute;
+//     width: 0px;
+//     height: 2px;
+//     margin-left: 20px;
+//     background-color: $white;
+//     top: 50%;
+//     animation: fstLine 1s forwards 4s ease-in-out;
+// }
 
 .header__title-snd::before{
     content: '';
