@@ -726,38 +726,6 @@
     }
 }
 
-// Wave Button's Fill
-.liquid{
-    position: absolute;
-    left: 0;
-    top: -80px;
-    width: 200px;
-    height: 200px;
-    background: $white;
-    transition: .5s;
-
-    &::before,
-    &::after{
-        content: '';
-        position: absolute;
-        width: 200%;
-        height: 200%;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -75%);
-        animation: waterBtn 5s linear infinite;
-    }
-
-    &::after{
-        border-radius: 45%;
-        background: rgba(30, 30, 30, .1);
-    }
-
-    &::before{
-        border-radius: 40%;
-        background: rgb(170, 170, 170);
-    }
-}
 
 // .smooth-scroll-wrapper{
 //     position: fixed;
@@ -778,56 +746,6 @@
     background-position: 0 bottom;
 }
 
-// Form
-.contact__form{
-    padding-top: 80px;
-
-    &-button{
-        margin-top: 30px;
-        width: 200px;
-        height: 40px;
-    }
-
-    &-group{
-        margin-bottom: 15px;
-    }
-
-    &-control{
-        min-width: 680px;
-        padding: 10px 0;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #121212;
-        color: $black;
-        font-size: 14px;
-        outline: none;
-        transition: all .3s;
-
-        &::placeholder{
-            color: $black-bg;
-            opacity: 1;
-        }
-
-        &:focus{
-            border-bottom-color: #393939;
-        }
-
-        &:focus::placeholder{
-            opacity: .5;
-            transition: opacity .3s ease;
-        }
-
-    }
-    
-}
-
-
-.buttons {
-    width: 680px;
-    text-align: center
-    // display: flex;
-    // justify-content: space-between;
-}
 
 .footer{
 
