@@ -2,6 +2,7 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     preLoader();
     circleText();
+    fileUpload();
 });
 
 var globalId = 0;
@@ -241,3 +242,14 @@ function linkPageTranslating(WRAPPER) {
 
 }
 
+// -------------------------------------------------------------------------------------------------------------------------
+// File Upload
+function fileUpload() {
+
+    const realFileBtn = document.getElementById('real-file');
+    const customFileBtn = document.getElementById('uploadBtn');
+
+    customFileBtn.addEventListener('click',()=>{
+        realFileBtn.click();
+    });
+}

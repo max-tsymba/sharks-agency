@@ -658,14 +658,62 @@
           
           <div class="container">
 
-            <div class="block__back footer__block-back">
-              <span>CONTACT</span>
-            </div>
-
             <div class="footer__inner"> 
               
                 <div class="footer__content-left">
-                  Contact
+                  <form class="footer__form">
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="name" autocomplete="off" required />
+                      <label class="label-name" for="name">
+                        <span class="label__content">Имя</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="surname" autocomplete="off" required />
+                      <label class="label-name" for="surname">
+                        <span class="label__content">Фамилия</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="url" name="website" pattern="https://.*" autocomplete="off" required />
+                      <label class="label-name" for="website">
+                        <span class="label__content">Сайт компании</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="tel" name="number" autocomplete="off" required />
+                      <label class="label-name" for="number">
+                        <span class="label__content">Номер телефона</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="email" name="mail" autocomplete="off" required />
+                      <label class="label-name" for="mail">
+                        <span class="label__content">Email</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="job" autocomplete="off" required />
+                      <label class="label-name" for="job">
+                        <span class="label__content">Род деятельности</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="service" autocomplete="off" required />
+                      <label class="label-name" for="service">
+                        <span class="label__content">Услуга</span>
+                      </label>
+                    </div>
+
+
+                  </form>
                 </div>
 
                 <div class="footer__content-right">
@@ -675,8 +723,58 @@
                     <div class="form__group">
                       <input class="footer__input" type="text" name="name" autocomplete="off" required />
                       <label class="label-name" for="name">
-                        <span class="label__content">Name</span>
+                        <span class="label__content">Имя</span>
                       </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="surname" autocomplete="off" required />
+                      <label class="label-name" for="surname">
+                        <span class="label__content">Фамилия</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="url" name="website" pattern="https://.*" autocomplete="off" required />
+                      <label class="label-name" for="website">
+                        <span class="label__content">Сайт компании</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="tel" name="number" autocomplete="off" required />
+                      <label class="label-name" for="number">
+                        <span class="label__content">Номер телефона</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="email" name="mail" autocomplete="off" required />
+                      <label class="label-name" for="mail">
+                        <span class="label__content">Email</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="job" autocomplete="off" required />
+                      <label class="label-name" for="job">
+                        <span class="label__content">Род деятельности</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group">
+                      <input class="footer__input" type="text" name="service" autocomplete="off" required />
+                      <label class="label-name" for="service">
+                        <span class="label__content">Услуга</span>
+                      </label>
+                    </div>
+
+                    <div class="form__group-btn">
+                      <button class="form__btn" type="submit">Отправить</button>
+                      <div class="form__fileUpload">
+                        <input type="file" id="real-file" hidden="hidden">
+                        <button class="fileUpload-btn" type="button" id="uploadBtn">Прикрепить файл</button>
+                      </div>
                     </div>
 
                   </form>
