@@ -32,12 +32,16 @@ $(function(){
     });
 
     // Contact Block
-    $('.bt1').on('click', function(){
+    $('.box-btnLeft').on('click', function(){
+        $('.box-btnRight').removeClass('arrowed');
+        $('.box-btnLeft').addClass('arrowed');
         $('.footer__box').removeClass('active-2');
         $('.footer__box').addClass('active-1');
     }); 
 
-    $('.bt2').on('click', function(){
+    $('.box-btnRight').on('click', function(){
+        $('.box-btnLeft').removeClass('arrowed');
+        $('.box-btnRight').addClass('arrowed');
         $('.footer__box').removeClass('active-1');
         $('.footer__box').addClass('active-2');
     }); 
