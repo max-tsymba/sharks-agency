@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     preLoader();
     circleText();
     fileUpload();
+    validatorForm();
 });
 
 var globalId = 0;
@@ -249,11 +250,156 @@ function linkPageTranslating(WRAPPER) {
 // -------------------------------------------------------------------------------------------------------------------------
 // File Upload
 function fileUpload() {
-
+    
     const realFileBtn = document.getElementById('real-file');
     const customFileBtn = document.getElementById('uploadBtn');
+    const realDoc = document.getElementById('real-file__doc');
+    const customDoc = document.getElementById('uploadBtn-doc');
 
     customFileBtn.addEventListener('click',()=>{
         realFileBtn.click();
     });
+
+    customDoc.addEventListener('click',()=>{
+        realDoc.click();
+    });
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Form Validator
+
+function validatorForm() {
+
+    const filePHP = '../sendmail.php';
+
+    const formContact = document.getElementById('contact-form');
+    const formWork = document.getElementById('work-form');
+    const right = document.getElementById('footer-right');
+
+    if($('.footer__box').hasClass('active-2')) {
+        formContact.addEventListener('submit',formSend);
+        console.log(2);
+    } else {
+        formWork.addEventListener('submit',formSend);
+        console.log(1);
+    }
+
+    async function formSend(e) {
+        e.preventDefault();
+
+        let error = formValidate(formContact);
+
+        let formData = new FormData(formContact);
+        formData.append('documents', formFile.files[0]);
+
+
+        if(error===0) {
+            right.classList.add('_sending');
+
+            let response = await fetch(filePHP, {
+                method: 'POST',
+                body: formData
+            });
+
+            console.log(response);
+
+            if(response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                right.classList.remove('_sending');
+            } else {
+                alert('Ошибка');
+                right.classList.remove('_sending');
+            }
+        } else {
+           alert('Заполните обязательные поля!');   
+        }
+    }
+
+
+    function formValidate(form) {
+        let error = 0;
+        let formReq = document.querySelectorAll('._reg');
+        let formLabel = document.querySelectorAll('._label');
+
+        for(let index=0; index<formReq.length; index++) {
+            const input = formReq[index];
+            const label = formLabel[index];
+
+            formRemoveError(input);
+            formRemoveLabel(label);
+
+
+            if(input.classList.contains('_email') || label.classList.contains('._label')) {
+                if(emailTest(input)) {
+                    formAddError(input);
+                    formAddLabel(label);
+                    error++;
+                }
+            } else if(input.classList.contains('_phone') || label.classList.contains('._label')) {
+                if(phoneTest(input)) {
+                    formAddError(input);
+                    formAddLabel(label);
+                    error++;
+                }
+            } else {
+
+                if(input.value === '') {
+                    formAddError(input);
+                    formAddLabel(label);
+                    error++;
+                }
+            }
+
+        }
+        return error;
+    }
+
+    function formAddError(input) {
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+    }
+
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+
+    function formAddLabel(label) {
+        label.parentElement.classList.add('_error');
+        label.classList.add('_error');
+    }
+
+    function formRemoveLabel(label) {
+        label.parentElement.classList.remove('_error');
+        label.classList.remove('_error');
+    }
+
+    function emailTest(input) {
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    }
+
+    function phoneTest(input) {
+        return !/^\d+$/.test(input.value);
+    }
+
+    const formFile = document.getElementById('real-file');
+
+    formFile.addEventListener('change', ()=>{
+        uploadFile(formFile.files[0]);
+    });
+
+    function uploadFile(file) {
+         
+        let reader = new FileReader();
+        reader.onload = function(e) {
+           
+        };
+        reader.onerror = function(e) {
+            alert('Ошибка!');
+        };
+        reader.readAsDataURL(file);
+    }
+
+
 }
