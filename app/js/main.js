@@ -51,13 +51,15 @@ $(function(){
     $('.slider-center').slick({
 
         autoplay: true,
-        speed: 2000,
+        speed: 1500,
         dots: false,
         infinite: false,
         centerMode: true,
+        draggable: false,
         slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
+        prevArrow: '<button class="arrow-Left">&#5176;</button>',
+        nextArrow: '<button class="arrow-Right">&#5171;</button>',
 
         responsive: [{
 
