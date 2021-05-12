@@ -3,12 +3,35 @@ window.addEventListener('DOMContentLoaded', ()=>{
     preLoader();
     circleText();
     fileUpload();
-    validatorForm();
+
+
 });
 
 var globalId = 0;
 
 $(function(){
+
+        
+    const formContact = document.getElementById('contact-form');
+    const formWork = document.getElementById('work-form');
+    let formReq = document.querySelectorAll('._reg');
+    let formLabel = document.querySelectorAll('._label');
+    let formReq2 = document.querySelectorAll('._reg-2');
+    let formLabel2 = document.querySelectorAll('._label-2');
+    const formFile = document.getElementById('real-file');
+    const formAnketa = document.getElementById('real-file__doc');
+
+    const req = '._reg';
+    const label = '._label';
+    const req2 = '._reg-2';
+    const label2 = '._label-2';
+
+    if($('.footer__box').hasClass('active-2')) {
+        console.log('ac2');
+        validatorForm(formContact, formReq, formLabel, req, label, formAnketa);
+        console.log('ac1');
+        validatorForm(formWork, formReq2, formLabel2, req2, label2, formFile);
+    }
 
     setTimeout(()=>{
         $('.header').ripples({
@@ -44,7 +67,7 @@ $(function(){
         $('.box-btnLeft').removeClass('arrowed');
         $('.box-btnRight').addClass('arrowed');
         $('.footer__box').removeClass('active-1');
-        $('.footer__box').addClass('active-2');
+        $('.footer__box').addClass('active-2');   
     }); 
 
 
@@ -257,6 +280,7 @@ function fileUpload() {
     const customFileBtn = document.getElementById('uploadBtn');
     const realDoc = document.getElementById('real-file__doc');
     const customDoc = document.getElementById('uploadBtn-doc');
+    
 
     customFileBtn.addEventListener('click',()=>{
         realFileBtn.click();
@@ -270,33 +294,25 @@ function fileUpload() {
 // -------------------------------------------------------------------------------------------------------------------------
 // Form Validator
 
-function validatorForm() {
+function validatorForm(form, formReq, formLabel, reg, label, formFile) {
 
     const filePHP = '../sendmail.php';
 
-    const formContact = document.getElementById('contact-form');
-    const formWork = document.getElementById('work-form');
-    const right = document.getElementById('footer-right');
+    const formContact = form;
 
-    if($('.footer__box').hasClass('active-2')) {
-        formContact.addEventListener('submit',formSend);
-        console.log(2);
-    } else {
-        formWork.addEventListener('submit',formSend);
-        console.log(1);
-    }
+    formContact.addEventListener('submit',formSend);
 
     async function formSend(e) {
         e.preventDefault();
 
-        let error = formValidate(formContact);
+        let error = formValidate(formContact, formReq, formLabel, reg, label);
 
         let formData = new FormData(formContact);
         formData.append('documents', formFile.files[0]);
 
 
         if(error===0) {
-            right.classList.add('_sending');
+            formContact.classList.add('_sending');
 
             let response = await fetch(filePHP, {
                 method: 'POST',
@@ -308,10 +324,11 @@ function validatorForm() {
             if(response.ok) {
                 let result = await response.json();
                 alert(result.message);
-                right.classList.remove('_sending');
+                formContact.classList.remove('_sending');
+                Reset(formContact);
             } else {
                 alert('Ошибка');
-                right.classList.remove('_sending');
+                formContact.classList.remove('_sending');
             }
         } else {
            alert('Заполните обязательные поля!');   
@@ -319,89 +336,104 @@ function validatorForm() {
     }
 
 
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._reg');
-        let formLabel = document.querySelectorAll('._label');
-
-        for(let index=0; index<formReq.length; index++) {
-            const input = formReq[index];
-            const label = formLabel[index];
-
-            formRemoveError(input);
-            formRemoveLabel(label);
-
-
-            if(input.classList.contains('_email') || label.classList.contains('._label')) {
-                if(emailTest(input)) {
-                    formAddError(input);
-                    formAddLabel(label);
-                    error++;
-                }
-            } else if(input.classList.contains('_phone') || label.classList.contains('._label')) {
-                if(phoneTest(input)) {
-                    formAddError(input);
-                    formAddLabel(label);
-                    error++;
-                }
-            } else {
-
-                if(input.value === '') {
-                    formAddError(input);
-                    formAddLabel(label);
-                    error++;
-                }
-            }
-
-        }
-        return error;
-    }
-
-    function formAddError(input) {
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
-    }
-
-    function formRemoveError(input) {
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
-    }
-
-    function formAddLabel(label) {
-        label.parentElement.classList.add('_error');
-        label.classList.add('_error');
-    }
-
-    function formRemoveLabel(label) {
-        label.parentElement.classList.remove('_error');
-        label.classList.remove('_error');
-    }
-
-    function emailTest(input) {
-        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-    }
-
-    function phoneTest(input) {
-        return !/^\d+$/.test(input.value);
-    }
-
-    const formFile = document.getElementById('real-file');
-
     formFile.addEventListener('change', ()=>{
         uploadFile(formFile.files[0]);
     });
 
-    function uploadFile(file) {
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Reset
+function Reset(form) {
+    form.reset();
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Forms Inputs Validator
+
+function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+}
+
+function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+}
+
+function formAddLabel(label) {
+    label.parentElement.classList.add('_error');
+    label.classList.add('_error');
+}
+
+function formRemoveLabel(label) {
+    label.parentElement.classList.remove('_error');
+    label.classList.remove('_error');
+}
+
+function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+function phoneTest(input) {
+    return !/^\d+$/.test(input.value);
+}
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Upload File Function
+
+function uploadFile(file) {
          
-        let reader = new FileReader();
-        reader.onload = function(e) {
-           
-        };
-        reader.onerror = function(e) {
-            alert('Ошибка!');
-        };
-        reader.readAsDataURL(file);
+    let reader = new FileReader();
+    reader.onload = function(e) {
+       
+    };
+    reader.onerror = function(e) {
+        alert('Ошибка!');
+    };
+    reader.readAsDataURL(file);
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Form Validate
+
+function formValidate(form, formReq, formLabel, reqe, labele) {
+    let error = 0;
+
+    for(let index=0; index<formReq.length; index++) {
+        const input = formReq[index];
+        const label = formLabel[index];
+
+        formRemoveError(input);
+        formRemoveLabel(label);
+
+
+        if(input.classList.contains('_email') || label.classList.contains(reqe)) {
+            console.log(reqe);
+            if(emailTest(input)) {
+                formAddError(input);
+                formAddLabel(label);
+                error++;
+            }
+        } else if(input.classList.contains('_phone') || label.classList.contains(labele)) {
+            console.log(labele);
+            if(phoneTest(input)) {
+                formAddError(input);
+                formAddLabel(label);
+                error++;
+            }
+        } else {
+
+            if(input.value === '') {
+                formAddError(input);
+                formAddLabel(label);
+                error++;
+            }
+        }
+
     }
-
-
+    return error;
 }

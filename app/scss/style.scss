@@ -1009,6 +1009,10 @@
     outline: none;
 }
 
+// #contact-form{
+//     display: none;
+// }
+
 .footer__form label{
     font-size: 12px;
     font-weight: 700;
@@ -1073,10 +1077,16 @@
 }
 
 .form__group._error{
-    label{
+    ._label._error{
         color: #B52000;
     }
-    label::after{
+    ._label._error::after{
+        border-color: #B52000;
+    }
+    ._label-2._error{
+        color: #B52000;
+    }
+    ._label-2._error::after{
         border-color: #B52000;
     }
 }
