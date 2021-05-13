@@ -2,7 +2,7 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     preLoader();
     circleText();
-    fileUpload();
+    // fileUpload();
 
 
 });
@@ -152,6 +152,8 @@ function preLoader() {
                 fullPageScrolling();
             }
         },4600);
+
+        
 
     });
 

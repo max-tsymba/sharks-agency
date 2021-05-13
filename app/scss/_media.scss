@@ -4,8 +4,25 @@
     }
 }
 
+@media (min-width: 426px) {
+
+    // HEADER
+    header{
+        background-image: url('../img/shark-bg.jpeg');
+    }
+}
+
+@media (max-width: 1025px) {
+
+    // ABOUT
+    .content__info{
+        max-width: 500px;
+    }
+}
+
 @media (max-width: 940px) {
 
+    // HEADER
     .header__title{
         font-size: 72px;
     }
@@ -13,21 +30,44 @@
     .subtitle-roll{
         font-size: 12px;
     }
+
+    // ABOUT 
+    .content__info{
+        font-size: 14px;
+    }
+
+    .content__subtitle-num{
+        font-size: 14px;
+    }
+
+    .content__subtitle-text{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 825px) {
     
+    // HEADER
     .menu{
         display: none;
     }
     .hamburger__menu{
         opacity: 1;
     }
+
+    // ABOUT
+    .content__info{
+        max-width: 400px;
+    }
+
+    .content__subtitle-block{
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 770px) {
 
-  
+    // HEADER
     .subtitle-roll{
         display: none;
     }
@@ -67,10 +107,53 @@
         display: flex;
         justify-content: center;
     }
+
+    // ABOUT
+    .circle__block{
+        display: none;
+    }
+
+    .content__boxing{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content__info{
+        max-width: 600px;
+        padding-bottom: 25px;
+    }
+
+    .content__subtitle{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .content__subtitle-block{
+        max-width: 400px;
+    }
+
+    .content__subtitle-num{
+        margin: 15px 0;
+        margin-right: 15px;
+    }
+
+    .about__content{
+        top: 50%;
+    }
+
+    .content__title{
+        margin-bottom: 25px;
+    }
+
+  
+    
 }
 
 @media (max-width: 475px) {
 
+    // HEADER
     .header__title{
         line-height: 54px;
     }
@@ -78,13 +161,14 @@
 }
 
 @media (max-width: 426px) {
+
+    // HEADER
+    .logo{
+        img{
+            width: 100px;
+        }
+    }
     header {
         background-image: url('../img/mobile-shark.jpg');
-    }
-}
-
-@media (min-width: 426px) {
-    header{
-        background-image: url('../img/shark-bg.jpeg');
     }
 }
