@@ -46,6 +46,13 @@
 }
 
 @media (max-width: 825px) {
+
+    .block__back{
+        span{
+            color: rgba($white, 0.05);
+            font-size: 100px;
+        }
+    }
     
     // HEADER
     .menu{
