@@ -2,8 +2,8 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     preLoader();
     circleText();
-    // fileUpload();
-
+    fileUpload();
+    popupQueary();
 
 });
 
@@ -43,20 +43,6 @@ $(function(){
         }, 4500);
     }
 
-    // Popup Team
-     $('.team__info-btn').on('click', function(e){
-        e.preventDefault();
-        
-        $('.team__info-btn').addClass('active');
-        let popupId = $(this).attr('data-tab');
-        $('#' + popupId).fadeIn();
-
-        $('.team__popup-close').on('click', function() {
-            
-            $(this).parents('.team__popup-wrap').fadeOut();
-            $('.team__info-btn').removeClass('active');
-        });
-    });
 
     // Contact Block
     $('.box-btnLeft').on('click', function(){
@@ -76,7 +62,7 @@ $(function(){
 
     $('.slider-center').slick({
 
-        autoplay: true,
+        // autoplay: true,
         speed: 1500,
         dots: false,
         infinite: false,
@@ -89,17 +75,24 @@ $(function(){
 
         responsive: [{
 
-            breakpoint: 1024,
+            breakpoint: 1360,
+            settings: {
+                centerMode: false,
+                infinite: true
+            }
+        },{
+
+            breakpoint: 1100,
             settings: {
                 slidesToShow: 2,
                 infinite: true
             }
         }, {
 
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 1,
-                dots: true
+                infinite: true
             }
         }, {
 
@@ -108,7 +101,56 @@ $(function(){
         }]
     });
 
+
 });
+
+function popupQueary() {
+
+    const popup = document.getElementsByClassName('team__info-btn');
+    const closePopup = document.getElementsByClassName('team__popup-close');
+
+    [].forEach.call(popup, (elem)=>{
+
+        elem.addEventListener('click', (e)=>{
+            e.preventDefault();
+
+            elem.classList.remove('active');
+            elem.classList.add('active');
+            let popupID = e.currentTarget.getAttribute('data-tab');
+
+            const btnHref = document.getElementById(popupID);
+            btnHref.classList.add('fade-in');
+
+            [].forEach.call(closePopup, (element)=>{
+
+                element.addEventListener('click', (e)=>{
+        
+                    e.currentTarget.closest('.team__popup-wrap').classList.remove('fade-in');
+                    elem.classList.remove('active');
+                });
+            })
+        });
+    });
+
+    
+
+       // Popup Team
+    //    $('.team__info-btn').on('click', function(e){
+    //     e.preventDefault();
+
+    //     console.log('ok');
+        
+    //     $('.team__info-btn').addClass('active');
+    //     let popupId = $(this).attr('data-tab');
+    //     $('#' + popupId).fadeIn();
+
+    //     $('.team__popup-close').on('click', function() {
+            
+    //         $(this).parents('.team__popup-wrap').fadeOut();
+    //         $('.team__info-btn').removeClass('active');
+    //     });
+    //     });
+}
 
 // -------------------------------------------------------------------------------------------------------------------------
 // PreLoader

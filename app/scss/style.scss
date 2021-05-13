@@ -4,6 +4,7 @@
 @import "fonts";
 
 /* BASIC */
+
 .container {
     max-width: 1350px; 
     margin: 0 auto;
@@ -526,7 +527,7 @@
 
 //Slider Team
 .team__slider{
-    width: 100%;
+    max-width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -538,7 +539,7 @@
     }
 
     img {
-        width: 300px;
+        width: 100px;
         height: 400px;
     }
 
@@ -592,16 +593,6 @@
 
 .arrow-Right{
     right: -60px;
-}
-
-@media (max-width: 1500px) {
-    .arrow-Left {
-        left: 20px;
-    }
-    
-    .arrow-Right{
-        right: 20px;
-    }
 }
 
 .team__slider-ref{
@@ -660,6 +651,7 @@
 
 .slick-current{
     opacity: 1;
+    width: 400px;
 }
 
 .slick-current .team__slider-ref:hover .team__slider-info{
@@ -712,6 +704,14 @@
     bottom: 0;
     left: 0;
     right: 0;
+    display: none;
+}
+
+.fade-in {
+    display: block;
+}
+
+.closed{
     display: none;
 }
 
