@@ -11,6 +11,7 @@ var globalId = 0;
 
 $(function(){
 
+    const media = window.matchMedia("(max-width: 770px)");
         
     const formContact = document.getElementById('contact-form');
     const formWork = document.getElementById('work-form');
@@ -33,12 +34,14 @@ $(function(){
         validatorForm(formWork, formReq2, formLabel2, req2, label2, formFile);
     }
 
-    setTimeout(()=>{
-        $('.header').ripples({
-            dropRadius: 10,
-            perturbance: 0.01,
-        });
-    }, 4500);
+    if (!media.matches) {
+        setTimeout(()=>{
+            $('.header').ripples({
+                dropRadius: 10,
+                perturbance: 0.01,
+            });
+        }, 4500);
+    }
 
     // Popup Team
      $('.team__info-btn').on('click', function(e){

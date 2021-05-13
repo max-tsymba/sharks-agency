@@ -72,69 +72,63 @@
 
 }
 
-/* Title Animation */
-@keyframes leftTitle{
-    from{
-        left: -100%;
+@media (min-width: 770px) {
+
+    /* Title Animation */
+    @keyframes leftTitle{
+        from{
+            left: -100%;
+        }
+        to{
+            left: 0%;
+        }
     }
-    to{
-        left: 0%;
+
+    @keyframes rightTitle{
+        from{
+            right: -100%;
+        }
+        to{
+            right: 0%;
+        }
+    }
+
+    @keyframes topNav{
+        from{
+            top: -100%;
+        }
+        to{
+            top: 0;
+        }
+    }
+
+    @keyframes botNav{
+        from{
+            bottom: -100%;
+        }
+        to{
+            bottom: 50px;
+        }
+    }
+
+
+    /*Title Line Animation*/
+    @keyframes fstLine{
+        from{
+            width: 0;
+        }
+        to{
+            width: 120px;
+        }
+    }
+
+    @keyframes sndLine{
+        from{
+            width: 0;
+        }
+        to{
+            width: 120px;
+        }
     }
 }
 
-@keyframes rightTitle{
-    from{
-        right: -100%;
-    }
-    to{
-        right: 0%;
-    }
-}
-
-@keyframes topNav{
-    from{
-        top: -100%;
-    }
-    to{
-        top: 0;
-    }
-}
-
-@keyframes botNav{
-    from{
-        bottom: -100%;
-    }
-    to{
-        bottom: 50px;
-    }
-}
-
-
-/*Title Line Animation*/
-@keyframes fstLine{
-    from{
-        width: 0;
-    }
-    to{
-        width: 120px;
-    }
-}
-
-@keyframes sndLine{
-    from{
-        width: 0;
-    }
-    to{
-        width: 120px;
-    }
-}
-
-/* Wave Button Animation */
-@keyframes waterBtn{
-    0%{
-        transform: translate(-50%, -75%) rotate(0deg);
-    }
-    100%{
-        transform: translate(-50%, -75%) rotate(360deg);
-    }
-}

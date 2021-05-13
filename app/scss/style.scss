@@ -8,6 +8,8 @@
     max-width: 1350px; 
     margin: 0 auto;
     height: 100vh;
+    padding: 0 15px;
+    position: relative;
 }
 
 .cont-1120 {
@@ -23,7 +25,7 @@
 
 .intro{
     position: fixed;
-    z-index: 10;
+    z-index: 20;
     left: 0;
     top: 0;
     width: 100%;
@@ -111,7 +113,6 @@
     align-items: flex-end;
     opacity: 0;
     div {
-        // opacity: 0;
         height: 2px;
         background: $white;
         transition: .5s ease;
@@ -146,6 +147,7 @@
 // Navigation
 .header__inner{
     overflow: hidden;
+    position: relative;
     height: 100px;
 }
 
@@ -160,7 +162,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    width: 1350px;
+    width: 100%;
 }
 
 // menu
@@ -242,7 +244,9 @@
 // Down Content
 .header__down{
     position: absolute;
-    width: 1350px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
     margin: 0 auto;
     bottom: 50px;
     overflow: hidden;
@@ -280,7 +284,7 @@
         line-height: 14px;  
         font-weight: 700;
         text-transform: uppercase;
-        padding-left: 36px;
+        padding-right: 36px;
         color: $white;
     }
 }
@@ -302,6 +306,7 @@
     &__content{
         position: absolute;
         right: 0;
+        z-index: 10;
         left: 0;
         text-align: center;
         top: 45%;
@@ -321,6 +326,12 @@
         font-size: 250px;
         font-weight: 800;
         color: rgba($white, 0.02);
+        -webkit-touch-callout: none; 
+        -webkit-user-select: none;   
+        -khtml-user-select: none;    
+        -moz-user-select: none;      
+        -ms-user-select: none;       
+        user-select: none; 
     }
 }
 
@@ -460,9 +471,10 @@
 
 // Content
 .services__content{
+    position: relative;
+    z-index: 10;
 
     &-items{
-    
         display: flex;
         justify-content: space-between;
         text-align: center;
