@@ -79,6 +79,12 @@
 
 @media (max-width: 426px) {
     header {
-        
+        background-image: url('../img/mobile-shark.jpg');
+    }
+}
+
+@media (min-width: 426px) {
+    header{
+        background-image: url('../img/shark-bg.jpeg');
     }
 }
