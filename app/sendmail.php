@@ -13,7 +13,7 @@
 
     $mail->setFrom('young.bezero@gmail.com', ['name']);
 
-    $mail->addAddress('macesbeats@gmail.com');
+    $mail->addAddress('salesdepartment@sharkit.digital');
 
     $mail->Subject = 'Форма Shark IT Agency';
 
