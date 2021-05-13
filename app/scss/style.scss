@@ -249,9 +249,7 @@
     transform: translateX(-50%);
     width: 100%; 
     margin: 0 auto;
-    bottom: 50px;
     overflow: hidden;
-    bottom: -100%;
     animation: botNav 2s forwards 3s ease-in-out;
 }
 
@@ -863,7 +861,7 @@
 /* FOOTER */
 
 .footer{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     background: #121212;
     color: $white;
@@ -1174,6 +1172,29 @@
     left: 50%;
     transform: translate(-50%, -10%);
 }
+
+.footer__down{
+    display: flex;
+    justify-content: center;
+    left: 0;
+}
+
+.footer-links{
+    justify-content: center;
+    padding-left: 15px;
+
+    a{
+        padding-right: 0;
+        padding-left: 36px;
+    }
+}
+
+.footer-social{
+    display: inline-block;
+    align-items: flex-start;
+    
+}
+
 
 
 

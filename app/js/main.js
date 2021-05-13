@@ -62,7 +62,7 @@ $(function(){
 
     $('.slider-center').slick({
 
-        // autoplay: true,
+        autoplay: true,
         speed: 1500,
         dots: false,
         infinite: false,
@@ -104,6 +104,9 @@ $(function(){
 
 });
 
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Popup
 function popupQueary() {
 
     const popup = document.getElementsByClassName('team__info-btn');
@@ -132,24 +135,6 @@ function popupQueary() {
         });
     });
 
-    
-
-       // Popup Team
-    //    $('.team__info-btn').on('click', function(e){
-    //     e.preventDefault();
-
-    //     console.log('ok');
-        
-    //     $('.team__info-btn').addClass('active');
-    //     let popupId = $(this).attr('data-tab');
-    //     $('#' + popupId).fadeIn();
-
-    //     $('.team__popup-close').on('click', function() {
-            
-    //         $(this).parents('.team__popup-wrap').fadeOut();
-    //         $('.team__info-btn').removeClass('active');
-    //     });
-    //     });
 }
 
 // -------------------------------------------------------------------------------------------------------------------------

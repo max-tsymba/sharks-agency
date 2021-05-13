@@ -16,6 +16,25 @@
     .container{
         height: 100vh;
     }
+    .footer{
+        height: 100vh;
+    }
+
+    .contact-us{
+        display: none;
+    }
+
+    .footer__content-formTitle{
+        display: none;
+    }
+
+    .foot-social-link{
+        display: none;
+    }
+
+    .header__down{
+        bottom: -100%;
+    }
 }
 
 @media (min-width: 426px) {
@@ -70,6 +89,16 @@
     }
 }
 
+@media (max-width: 1140px) {
+    .form__btn{
+        padding: 5px 15px;
+    }
+
+    .fileUpload-btn{
+        padding: 5px 15px;
+    }
+}
+
 @media (max-width: 1100px) {
 
 
@@ -118,6 +147,13 @@
     // SERVICES
     .services__content-item{
         max-width: 260px;
+    }
+
+    .footer__block-back{
+        
+        span{
+            font-size: 32px;
+        }
     }
 }
 
@@ -175,6 +211,22 @@
     // SERVICES
     .content__item-info{
         font-size: 14px;
+    }
+
+    .form__btn{
+        font-size: 12px;
+    }
+
+    .fileUpload-btn{
+        font-size: 12px;
+    }
+
+    .footer__block-back{
+        
+        span{
+            color: $white;
+            font-size: 32px;
+        }
     }
 }
 
@@ -311,7 +363,54 @@
     .team__slider-ref::before{
         display: none;
     }
-    
+
+    .footer{
+        height: 1500px;
+    }
+
+    .footer__box{
+        display: none;
+    }
+
+    .footer__inner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-us{
+        padding-top: 200px;
+    }
+
+    .footer__content-left{
+        width: 100vw;
+    }
+
+    .footer__content-right{
+        width: 100vw;
+    }
+
+    .footer__content-right{
+        margin-top: 100px;
+    }
+
+    .footer__content-formTitle{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .foot-social-link{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1200px;
+    }
+
+    .footer__inner{
+        padding-top: 200px;
+    }
+
+
 }
 
 @media (max-width: 560px) {
@@ -334,6 +433,12 @@
 
         width: 60px;
 
+    }
+
+    .footer__content-formTitle{
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
     }
 
 }
@@ -370,6 +475,12 @@
         width: 220px;
     }
 
+    .footer__block-back{
+        span{
+            font-size: 32px;
+        }
+    }
+
 
 }
 
@@ -383,5 +494,11 @@
     }
     header {
         background-image: url('../img/mobile-shark.jpg');
+    }
+
+    .footer__block-back{
+        span{
+            font-size: 30px;
+        }
     }
 }
