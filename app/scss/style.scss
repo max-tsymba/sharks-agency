@@ -7,7 +7,7 @@
 .container {
     max-width: 1350px; 
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 15px;
     position: relative;
 }
@@ -428,7 +428,6 @@
 /* SERVICES SECTION */
 
 .services{
-    height: 100vh;
     background: #121212;
     color: $black;
     position: relative;
@@ -436,10 +435,11 @@
     background-size: cover;
     background-position: center;
     color: #f5f5f5;
+    min-height: 100vh;
     
     &__inner{
+        min-height: 100vh;
         position: relative;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;    
@@ -478,6 +478,7 @@
 
     &-items{
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
         text-align: center;
         padding-top: 50px;
