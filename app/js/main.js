@@ -242,7 +242,7 @@ function fullPageScrolling() {
 
 
 
-    WRAPPER.style.transform = 'translateY(0)';
+    WRAPPER.style.transform = 'translateY(0vh)';
     WRAPPER.focus();
 
     linkPageTranslating(WRAPPER);
@@ -257,7 +257,7 @@ function fullPageScrolling() {
 
     WRAPPER.addEventListener('keydown', (e)=>{
 
-        e.preventDefault();
+        // e.preventDefault();
         
         if(e.code === 'ArrowUp') scdir = 'down';
         if(e.code === 'ArrowDown') scdir = 'up';
@@ -310,7 +310,7 @@ function linkPageTranslating(WRAPPER) {
                 WRAPPER.style.transform = 'translateY(-400vh)';
                 break;
             default: 
-                WRAPPER.style.transform = 'translateY(0)';
+                WRAPPER.style.transform = 'translateY(0vh)';
                 break;
         }
     });
