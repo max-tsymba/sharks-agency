@@ -196,6 +196,15 @@ function fullPageScrolling() {
     let scdir, hold = false;
     const WRAPPER = document.getElementById('fullpage');
 
+    // document.body.onkeyup = function(e) {
+    //     let code = e.keyCode;
+    //     if(code === 81) {
+    //         window.scrollTo(document.body.scrollLeft,
+    //             document.body.scrollTo + 500);
+    //             console.log(2);
+    //     }
+    // }
+
     function _scrollY(obj) {
 
         let slength, plength, pan, step = 100,
@@ -254,7 +263,18 @@ function fullPageScrolling() {
         e.stopPropagation();
     });
 
+    WRAPPER.addEventListener('keydown', (e)=>{
+
+        if(e.code == 'ArrowUp') scdir = 'down';
+        if(e.code == 'ArrowDown') scdir = 'up';
+        console.log(e.code);
+
+        e.stopPropagation();
+    })
+
     WRAPPER.addEventListener('wheel', _scrollY);
+    WRAPPER.addEventListener('keydown', _scrollY);
+
 
 }
 

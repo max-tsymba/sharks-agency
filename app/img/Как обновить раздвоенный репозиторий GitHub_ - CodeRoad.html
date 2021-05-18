@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<!-- saved from url=(0236)https://coderoad.ru/7244321/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Required meta tags -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Material Design for Bootstrap fonts and icons -->
+
+<link rel="stylesheet" href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/bootstrap.75f912b2cbba.css">
+<link rel="stylesheet" href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/all.5fd5e45c6313.css">
+<link rel="stylesheet" href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/Roboto_300,400,500,700.3f800ce36266">
+
+<script type="text/javascript" async="" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/analytics.js.download"></script><script data-ad-client="ca-pub-1392785890131419" async="" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/f.txt"></script>
+
+<!-- <link href="/static/css/debug-bootstrap.43f7fd3dc10e.css" rel="stylesheet"> -->
+
+<title> Как обновить раздвоенный репозиторий GitHub?
+ - CodeRoad</title>
+ 
+	<meta name="keywords" content="git, github, pull-request, git-fork">
+	
+		<meta name="description" content=" В локальном клоне раздвоенного репозитория вы можете добавить исходный репозиторий GitHub как remote. (Remotes-это как прозвища для URLs репозиториев - например, origin -это одно из них.) Затем вы...">
+	
+
+
+
+<style>
+
+.container-fluid , .navbar {
+	max-width: 1800px
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+	font-size: 1.5rem;
+	float: left;
+}
+#content {
+	min-height: 1100px;
+}
+.navbar {
+	min-height: 60px;
+}
+
+a:hover, a:hover.nav-link{
+	text-decoration: underline;
+}
+
+a, a:VISITED, .btn-link {
+	text-decoration: none;
+	color: #1675d1;
+}
+
+a.btn-secondary {
+	color: #fff;
+} 
+.btn-outline-light:not(:disabled):not(.disabled).active {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-color: rgba(0, 0, 0, 0.125);
+}
+.btn-outline-light {
+	border-color: rgba(0, 0, 0, 0.125);
+	color: #1675d1;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+
+.form-control-underlined {
+	border-width: 0;
+	border-bottom-width: 5px;
+	border-radius: 0;
+	padding-left: 0;
+}
+.autocomplete, .autocomplete.open{
+	z-index: 1022;
+	color: black;
+}
+ol {
+	padding-left: 1.5rem;
+}
+ol li {
+	padding-left: 0.5rem;
+}
+em {
+	font-weight: 600;
+}
+strong {
+	font-weight: 700;
+}
+html, body {
+	height: 100%;
+}
+
+.post-text ul p:last-of-type, .wmd-preview ul p:last-of-type, .post-text ol p:last-of-type, .wmd-preview ol p:last-of-type {
+margin-bottom: 0;
+}
+h1, .h1 {
+font-size: 2.2rem;
+}
+</style>
+
+
+<style>
+.votes {
+padding: 0px;
+	/* width: 50px !important;
+	max-width: 60px !important; */
+	text-align: center;
+	font-size: 1.25rem
+}
+.votes i{
+	font-size: 1.75rem
+}
+img {
+	max-width: 100%;
+	border: 1px solid #ddd;
+}
+pre {
+	overflow: auto;
+	padding: 16px;
+	background-color: #f6f8fa;
+	border: 0.5px solid #ddd;
+	border-radius: 3px;
+	max-height: 700px;
+}
+pre code {
+	background-color: inherit;
+	padding: 0px 0px;
+}
+code {
+	background-color: #f5f5f5;
+	padding: 1px 5px;
+}
+blockquote {
+  overflow: auto;
+  background: #f9f9f9;
+  border-left: 4px solid #ccc;
+  margin: 1.5em 4px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  max-height: 700px;
+}
+blockquote:before {
+  color: #ccc;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+.tooltip.show {
+opacity:.5
+}
+
+</style>
+
+
+</head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-primary text-light shadow-sm sticky-top" style="white-space: nowrap">
+	<div class="container-fluid">
+		<a class="btn p-0 pb-1 d-lg-none" data-toggle="collapse" href="https://coderoad.ru/7244321/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub#navbarToggleExternalContent" role="button" aria-expanded="false" aria-controls="navbarToggleExternalContent"> 
+			<span class="navbar-toggler-icon"></span> 
+		</a>
+		<div class="col-lg-2 d-none d-lg-flex left-menu align-items-center">
+		<div class="logo border border-white rounded d-none d-xl-flex justify-content-center align-items-center">
+			<a href="https://coderoad.ru/"><i class="fas fa-code text-white"></i></a>
+		</div>
+		<a class="navbar-brand text-light pl-2" href="https://coderoad.ru/">CodeRoad</a>
+		</div>
+		<form class="navbar-form w-100 pl-3 pr-2" id="search_form" method="get" action="https://coderoad.ru/search/" onsubmit="javascript: return submit_form()">
+			<div class="p-1 pl-2 pr-3 bg-light rounded rounded-pill  ">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<button id="button-addon1" type="submit" class="btn btn-link">
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
+					<input type="search" placeholder="Что вы ищете?" aria-describedby="button-addon1" class="form-control border-0 bg-light" data-autocomplete="/search/autocomplete/" id="search_text" name="q" autocomplete="off">
+	
+				<div class="autocomplete" style="top:43px;left:41px;width:877px;"></div></div>
+			</div>
+		</form>
+		<div class="col-lg-2 d-none d-xl-block left-menu text-center">
+		    <a class="text-light" href="https://coderoad.ru/about.html">О нас</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="text-light" href="https://coderoad.ru/contacts.html">Контакты</a>
+		</div>
+  
+	</div>
+</nav>
+	
+	<div class="container-fluid ml-0 shadow">
+		<div class="row align-items-start navbar-expand-lg bg-primary">
+			<div class="col-sm collapse navbar-collapse pt-4 text-light left-menu bg-primary" id="navbarToggleExternalContent">
+				 <nav class="sidebar">
+<div class="row">
+<div class="col col-lg-12">
+<a class="nav-link text-light navbar-brand" href="https://coderoad.ru/">Главная</a><br>
+<a class="nav-link text-light navbar-brand" href="https://coderoad.ru/list/?page=1&amp;sort=view">Вопросы</a>
+<ul class="d-none d-sm-block d-md-block">
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=date">Новые</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view">Популярные</a></li>
+</ul>
+<a class="nav-link text-light navbar-brand" href="https://coderoad.ru/tags/">Теги</a>
+</div>
+<div class="col col-lg-12">
+<ul class="d-none d-sm-block d-md-block py-0 my-0">
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=javascript">javascript</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=java">java</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=c%23">c#</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=php">php</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=python">python</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=android">android</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=jquery">jquery</a></li>
+</ul>
+</div>
+<div class="col col-lg-12">
+<ul class="d-none d-sm-block py-0 my-0">
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=html">html</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=c%2b%2b">c++</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=ios">ios</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=css">css</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=mysql">mysql</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=sql">sql</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=asp.net">asp.net</a></li>
+</ul>
+</div>
+<div class="col d-none d-md-block col-lg-12">
+<ul class="py-0 my-0">
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=c">c</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=r">r</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=ruby-on-rails">ruby-on-rails</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=arrays">arrays</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=node.js">node.js</a></li>
+<li><a class="nav-link text-light pl-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=.net">.net</a></li>
+</ul>
+</div>
+
+</div></nav> 
+			</div>
+				
+			<div class="col-12 col-lg-10 position-relative border-left bg-white">
+				
+				<!-- Page Content -->
+				<div class="row h-100">
+					<div id="content" class="overflow-hidden border-right col-xl-9 col-lg-12 h-100 px-4 pb-5 pt-4">
+							<div class="border-top d-block d-sm-none d-md-none"></div>
+						
+
+
+<br>
+
+<h1 class="text-break">Как обновить раздвоенный репозиторий GitHub?</h1>
+<br>
+<div class="text-break">
+
+<p>Недавно я разветвил проект и применил несколько исправлений. Затем я создал запрос на вытягивание, который затем был принят.
+</p>
+
+
+<p>Через несколько дней еще одно изменение внес другой участник. Так что мой fork не содержит этого изменения.
+ </p>
+
+
+<p>Как я могу получить это изменение в свой fork? Нужно ли мне удалять и заново создавать свой fork, когда у меня есть дополнительные изменения, чтобы внести свой вклад? Или есть кнопка обновления?</p>
+ 
+
+
+ 
+
+
+
+
+	
+	<a class="btn btn-secondary btn-sm shadow-sm m-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=git" role="button" data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="Git-это распределенная система управления версиями с открытым исходным кодом (DVCS). Используйте этот тег для вопросов, связанных с Git использованием и рабочими процессами. Не используйте тег [github] для проблем, связанных с Git, просто потому, что репозиторий размещается на GitHub. Кроме того, не используйте этот тег для общих вопросов программирования, которые связаны с репозиторием Git.
+" data-original-title="git">git</a>
+	
+	<a class="btn btn-secondary btn-sm shadow-sm m-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=github" role="button" data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="GitHub-это веб-хостинг для проектов разработки программного обеспечения, использующих Git для управления версиями. Используйте этот тег для вопросов, относящихся к проблемам с репозиториями, размещенными на GitHub, функциями, относящимися к GitHub, и использованием GitHub для совместной работы с другими пользователями. Не используйте этот тег для проблем, связанных с Git, просто потому, что репозиторий размещается на GitHub." data-original-title="github">github</a>
+	
+	<a class="btn btn-secondary btn-sm shadow-sm m-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=pull-request" role="button" data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="Запросы на вытягивание создаются, когда разработчик разветвляет проект, вносит изменения, а затем хочет, чтобы эти изменения были снова включены в основной проект. Они стали популярными в 28 и 27 годах. " data-original-title="pull-request">pull-request</a>
+	
+	<a class="btn btn-secondary btn-sm shadow-sm m-1" href="https://coderoad.ru/list/?page=1&amp;sort=view&amp;tag=git-fork" role="button" data-toggle="popover" data-trigger="hover" title="" data-placement="top" data-content="git-fork относится к созданию нового репозитория git на основе текущего. NOTE: некоторые детали зависят от того, используете ли вы GitHub, Bitbucket, GitLab или любые другие хостинговые системы; рассмотрите возможность добавления соответствующего дополнительного тега соответственно." data-original-title="git-fork">git-fork</a>
+	
+
+</div>
+
+<br>
+<div class="d-flex justify-content-between align-items-center">
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+<a href="https://stackoverflow.com/questions/7244321" rel="nofollow noreferrer">
+<small><i class="far fa-copy"></i> Источник</small>
+</a>
+<small class="d-flex align-items-center text-muted">
+<b>Lea Hayes</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">30 августа 2011 в 13:53</i>
+ 
+</small>
+</div>
+
+<br><br>
+
+<h3 class="text-capitalize">
+1 ответ
+</h3>
+
+
+
+<hr id="">
+<div class="d-flex justify-content-around align-items-center">
+<div class="ads">
+
+<script async="" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/f.txt"></script>
+<!-- coderoad-square-336х280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1392785890131419" data-ad-slot="5650267029"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<div class="d-none d-md-block">
+<ul class="list-unstyled">
+
+	
+
+	
+
+	
+
+	
+		
+		<li>
+			<a href="https://coderoad.ru/30790301/%D0%92%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-github-%D0%B8-%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D1%81%D0%BA%D1%80%D1%83%D1%82%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9" class="nav-link">Владение на github и как раскрутить репозиторий?</a>
+			<p class="text-break small pl-3">
+			 У меня есть несколько вопросов о репозитории Github. 1) Как проверить право собственности на раздвоенный репозиторий. 2) Как удалить репозиторий из моего аккаунта (не удаляя его из чужого аккаунта. Я недавно раздвоил его на свой счет) 3) Как добавить пользователей в мой репозиторий. Я попытался...
+			</p>
+		</li>
+		
+	
+
+	
+		
+		<li>
+			<a href="https://coderoad.ru/39312655/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D1%8F-GitHub-pull-request" class="nav-link">Как обновить после слияния GitHub pull request?</a>
+			<p class="text-break small pl-3">
+			 У меня есть проблема с пониманием рабочего процесса на GitHub. Сначала я fork чей-то репозиторий. Я клонирую репозиторий локально( на своем компьютере) Я создаю ветку под названием Sample101 и вношу изменения Я толкаю ветку Sample101 на свой счет GitHub Я создаю запрос на вытягивание Человек,...
+			</p>
+		</li>
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+</ul>
+</div>
+</div>
+
+
+
+
+
+
+<hr id="7244456">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+4151<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>В локальном клоне раздвоенного репозитория вы можете добавить исходный репозиторий GitHub как "remote".  ("Remotes"-это как прозвища для URLs репозиториев - например,  <code>origin</code> -это одно из них.)  Затем вы можете извлечь все ветви из этого вышестоящего репозитория и перебазировать свою работу, чтобы продолжить работу над вышестоящей версией.  С точки зрения команд, которые могут выглядеть так:
+</p>
+
+
+<pre class="lang-sh prettyprint-override prettyprinted" style=""><code><span class="com"># Add the remote, call it "upstream":</span><span class="pln">
+
+git remote add upstream https</span><span class="pun">://</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">whoever</span><span class="pun">/</span><span class="pln">whatever</span><span class="pun">.</span><span class="pln">git
+
+</span><span class="com"># Fetch all the branches of that remote into remote-tracking branches,</span><span class="pln">
+</span><span class="com"># such as upstream/master:</span><span class="pln">
+
+git fetch upstream
+
+</span><span class="com"># Make sure that you're on your master branch:</span><span class="pln">
+
+git checkout master
+
+</span><span class="com"># Rewrite your master branch so that any commits of yours that</span><span class="pln">
+</span><span class="com"># aren't already in upstream/master are replayed on top of that</span><span class="pln">
+</span><span class="com"># other branch:</span><span class="pln">
+
+git rebase upstream</span><span class="pun">/</span><span class="pln">master</span></code></pre>
+
+
+
+<p>Если вы не хотите переписывать историю своей главной ветви (например, потому, что ее могли клонировать другие люди), то вам следует заменить последнюю команду на  <code>git merge upstream/master</code> .  Однако для того, чтобы сделать дальнейшие запросы на вытягивание максимально чистыми, вероятно, лучше перебазироваться.
+
+</p>
+
+
+<hr>
+
+<p>Если вы перебазировали свою ветвь на  <code>upstream/master</code> , вам может понадобиться принудительно нажать кнопку, чтобы переместить ее в свой собственный раздвоенный репозиторий на GitHub.  Вы бы сделали это с помощью:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git push </span><span class="pun">-</span><span class="pln">f origin master</span></code></pre>
+
+
+
+<p>Вам нужно использовать  <code>-f</code>  только в первый раз после того, как вы перебазировались.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#7244456" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Mark Longair</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">30 августа 2011 в 14:01</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="23853061">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+756<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Начиная с мая 2014 года, можно обновить fork непосредственно с GitHub. Это все еще работает по состоянию на сентябрь 2017 года,  <strong>BUT</strong>  это приведет к грязной истории фиксации(коммита).
+
+</p>
+
+
+<ol>
+<li>Откройте fork на GitHub.
+</li>
+
+<li>Нажмите на  <kbd>Pull Requests</kbd> .
+</li>
+
+<li>Нажмите на  <kbd>New Pull Request</kbd> . По умолчанию GitHub будет сравнивать оригинал с вашим fork, и там не должно быть ничего, чтобы сравнить, если вы не внесли никаких изменений.
+</li>
+
+<li>Нажмите кнопку  <kbd>switching the base</kbd> , если вы видите эту ссылку. В противном случае вручную установите выпадающий список  <kbd>base fork</kbd>  на ваш fork, а  <kbd>head fork</kbd> -на восходящий. Теперь GitHub будет сравнивать ваш fork с оригиналом, и вы должны увидеть все последние изменения.
+ <a href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/FoNQu.png" rel="nofollow noreferrer"> <img src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/FoNQu.png" alt="enter image description here"> </a>
+
+ </li>
+ <li><kbd>Create pull request</kbd>  и назначьте предсказуемое имя вашему запросу на вытягивание (например,  <code>Update from original</code> ).
+</li>
+
+<li>Прокрутите вниз до  <kbd>Merge pull request</kbd>, но пока ничего не нажимайте.
+
+</li>
+</ol>
+
+
+<p>Теперь у вас есть три варианта, но каждый из них приведет к истории фиксации(коммита) less-than-clean.
+
+</p>
+
+
+<ol>
+<li>По умолчанию будет создан некрасивый коммит слияния.
+</li>
+
+<li>Если вы нажмете на выпадающий список и выберете "сквош и слияние", все промежуточные коммиты будут сжаты в один. Чаще всего это то, чего вы не хотите.
+</li>
+
+<li>Если вы нажмете  <kbd>Rebase and merge</kbd>, все коммиты будут сделаны "with" вами, оригинал PRs будет связан с вашим PR, а GitHub отобразит  <code>This branch is X commits ahead, Y commits behind &lt;original fork&gt;</code> .
+
+</li>
+</ol>
+
+
+<p>Так что да, вы можете обновлять свое РЕПО с его восходящим потоком, используя GitHub web UI, но это запятнает вашу историю фиксаций(коммитов). Вместо этого придерживайтесь  <a href="https://coderoad.ru/7244321/">командной строки</a> -это легко.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#23853061" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>lobzik</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">25 мая 2014 в 07:31</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="19506355">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+469<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Вот официальный документ GitHub о  <a href="https://help.github.com/articles/syncing-a-fork" rel="nofollow noreferrer">синхронизации a fork</a> :
+
+</p>
+
+
+<blockquote>
+  <h1>Синхронизация a fork
+</h1>
+  
+  
+<h2>Установка
+</h2>
+  
+  
+<p>Прежде чем вы сможете синхронизировать, вам нужно добавить пульт дистанционного управления, который указывает на вышестоящий репозиторий. Возможно, вы сделали это, когда изначально раздвоились.
+
+</p>
+  
+   <p><em>Совет: синхронизация fork обновляет только локальную копию репозитория; она не обновляет ваш репозиторий на GitHub.</em>
+ </p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ git remote </span><span class="pun">-</span><span class="pln">v
+</span><span class="com"># List the current remotes</span><span class="pln">
+origin  https</span><span class="pun">:</span><span class="com">//github.com/user/repo.git (fetch)</span><span class="pln">
+origin  https</span><span class="pun">:</span><span class="com">//github.com/user/repo.git (push)</span><span class="pln">
+
+$ git remote </span><span class="kwd">add</span><span class="pln"> upstream https</span><span class="pun">:</span><span class="com">//github.com/otheruser/repo.git</span><span class="pln">
+</span><span class="com"># Set a new remote</span><span class="pln">
+
+$ git remote </span><span class="pun">-</span><span class="pln">v
+</span><span class="com"># Verify new remote</span><span class="pln">
+origin    https</span><span class="pun">:</span><span class="com">//github.com/user/repo.git (fetch)</span><span class="pln">
+origin    https</span><span class="pun">:</span><span class="com">//github.com/user/repo.git (push)</span><span class="pln">
+upstream  https</span><span class="pun">:</span><span class="com">//github.com/otheruser/repo.git (fetch)</span><span class="pln">
+upstream  https</span><span class="pun">:</span><span class="com">//github.com/otheruser/repo.git (push)</span></code></pre>
+  
+  
+
+<h2>Синхронизация
+</h2>
+  
+  
+<p>Существует два шага, необходимых для синхронизации вашего репозитория с вышестоящим потоком: сначала вы должны получить данные с удаленного сервера, а затем объединить нужную ветвь в локальную ветвь.
+</p>
+  
+  
+<h3>Очаровательный
+</h3>
+  
+  
+<p>Извлечение из удаленного репозитория приведет к появлению его ветвей и соответствующих им коммитов. Они хранятся в вашем локальном репозитории в специальных ветвях.
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ git fetch upstream
+</span><span class="com"># Grab the upstream remote's branches</span><span class="pln">
+remote</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Counting</span><span class="pln"> objects</span><span class="pun">:</span><span class="pln"> </span><span class="lit">75</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">done</span><span class="pun">.</span><span class="pln">
+remote</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Compressing</span><span class="pln"> objects</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pun">%</span><span class="pln"> </span><span class="pun">(</span><span class="lit">53</span><span class="pun">/</span><span class="lit">53</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">done</span><span class="pun">.</span><span class="pln">
+remote</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Total</span><span class="pln"> </span><span class="lit">62</span><span class="pln"> </span><span class="pun">(</span><span class="pln">delta </span><span class="lit">27</span><span class="pun">),</span><span class="pln"> reused </span><span class="lit">44</span><span class="pln"> </span><span class="pun">(</span><span class="pln">delta </span><span class="lit">9</span><span class="pun">)</span><span class="pln">
+</span><span class="typ">Unpacking</span><span class="pln"> objects</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pun">%</span><span class="pln"> </span><span class="pun">(</span><span class="lit">62</span><span class="pun">/</span><span class="lit">62</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">done</span><span class="pun">.</span><span class="pln">
+</span><span class="typ">From</span><span class="pln"> https</span><span class="pun">:</span><span class="com">//github.com/otheruser/repo</span><span class="pln">
+ </span><span class="pun">*</span><span class="pln"> </span><span class="pun">[</span><span class="kwd">new</span><span class="pln"> branch</span><span class="pun">]</span><span class="pln">      master     </span><span class="pun">-&gt;</span><span class="pln"> upstream</span><span class="pun">/</span><span class="pln">master</span></code></pre>
+  
+  
+
+<p>Теперь у нас есть главная ветвь upstream, хранящаяся в локальной ветви upstream/master
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ git branch </span><span class="pun">-</span><span class="pln">va
+</span><span class="com"># List all local and remote-tracking branches</span><span class="pln">
+</span><span class="pun">*</span><span class="pln"> master                  a422352 </span><span class="typ">My</span><span class="pln"> </span><span class="kwd">local</span><span class="pln"> commit
+  remotes</span><span class="pun">/</span><span class="pln">origin</span><span class="pun">/</span><span class="pln">HEAD     </span><span class="pun">-&gt;</span><span class="pln"> origin</span><span class="pun">/</span><span class="pln">master
+  remotes</span><span class="pun">/</span><span class="pln">origin</span><span class="pun">/</span><span class="pln">master   a422352 </span><span class="typ">My</span><span class="pln"> </span><span class="kwd">local</span><span class="pln"> commit
+  remotes</span><span class="pun">/</span><span class="pln">upstream</span><span class="pun">/</span><span class="pln">master </span><span class="lit">5fdff0f</span><span class="pln"> </span><span class="typ">Some</span><span class="pln"> upstream commit</span></code></pre>
+  
+  
+
+<h3>Слияние
+</h3>
+  
+  
+<p>Теперь, когда мы извлекли вышестоящий репозиторий, мы хотим объединить его изменения в нашу локальную ветвь. Это приведет эту ветвь в синхронизацию с восходящим потоком, не теряя наших локальных изменений.
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ git checkout master
+</span><span class="com"># Check out our local master branch</span><span class="pln">
+</span><span class="typ">Switched</span><span class="pln"> to branch </span><span class="str">'master'</span><span class="pln">
+
+$ git merge upstream</span><span class="pun">/</span><span class="pln">master
+</span><span class="com"># Merge upstream's master into our own</span><span class="pln">
+</span><span class="typ">Updating</span><span class="pln"> a422352</span><span class="pun">..</span><span class="lit">5fdff0f</span><span class="pln">
+</span><span class="typ">Fast</span><span class="pun">-</span><span class="pln">forward
+ README                    </span><span class="pun">|</span><span class="pln">    </span><span class="lit">9</span><span class="pln"> </span><span class="pun">-------</span><span class="pln">
+ README</span><span class="pun">.</span><span class="pln">md                 </span><span class="pun">|</span><span class="pln">    </span><span class="lit">7</span><span class="pln"> </span><span class="pun">++++++</span><span class="pln">
+ </span><span class="lit">2</span><span class="pln"> files changed</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7</span><span class="pln"> insertions</span><span class="pun">(+),</span><span class="pln"> </span><span class="lit">9</span><span class="pln"> deletions</span><span class="pun">(-)</span><span class="pln">
+ </span><span class="kwd">delete</span><span class="pln"> mode </span><span class="lit">100644</span><span class="pln"> README
+ create mode </span><span class="lit">100644</span><span class="pln"> README</span><span class="pun">.</span><span class="pln">md</span></code></pre>
+  
+  
+
+<p>Если в вашем локальном ветке не было никаких уникальных коммитов, git вместо этого выполнит "быструю перемотку вперед":
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ git merge upstream</span><span class="pun">/</span><span class="pln">master
+</span><span class="typ">Updating</span><span class="pln"> </span><span class="lit">34e91da</span><span class="pun">..</span><span class="lit">16c56ad</span><span class="pln">
+</span><span class="typ">Fast</span><span class="pun">-</span><span class="pln">forward
+ README</span><span class="pun">.</span><span class="pln">md                 </span><span class="pun">|</span><span class="pln">    </span><span class="lit">5</span><span class="pln"> </span><span class="pun">+++--</span><span class="pln">
+ </span><span class="lit">1</span><span class="pln"> file changed</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pln"> insertions</span><span class="pun">(+),</span><span class="pln"> </span><span class="lit">2</span><span class="pln"> deletions</span><span class="pun">(-)</span></code></pre>
+  
+  
+
+ <p><em>Совет: Если вы хотите обновить свой репозиторий на GitHub, следуйте инструкциям  <a href="https://help.github.com/articles/pushing-to-a-remote#pushing-a-branch" rel="nofollow noreferrer">здесь </a></em>
+ </p>
+</blockquote>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#19506355" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>jumpnett</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">21 октября 2013 в 23:04</i>
+ 
+</small>
+</div>
+
+
+<hr id="19506355">
+<div class="d-flex justify-content-around align-items-center">
+<div class="d-none d-md-block">
+<ul class="list-unstyled">
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		
+		<li>
+			<a href="https://coderoad.ru/40795688/%D0%A1%D1%82%D1%80%D1%83%D1%87%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9" class="nav-link">Стручки-как использовать раздвоенный репозиторий?</a>
+			<p class="text-break small pr-3">
+			 У меня возникли проблемы с обновлением моей капсулы от моей раздвоенной repository..keep становится: [!] Не удалось найти спецификацию для 'QMChatViewController'. story...I разветвили хранилище, вот это: https://github.com/QuickBlox/QMChatViewController-ios Затем я сделал некоторые изменения,...
+			</p>
+		</li>
+		
+	
+
+	
+		
+		<li>
+			<a href="https://coderoad.ru/45475227/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-Github-Fork-%D0%B8-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C-%D1%82%D0%BE%D1%82-%D0%B6%D0%B5-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BB%D0%BE%D0%BD-%D0%B2-%D0%BC%D0%BE%D0%B5%D0%B9" class="nav-link">Как удалить рабочий процесс Github Fork и указать тот же локальный клон в моей системе в главный репозиторий</a>
+			<p class="text-break small pr-3">
+			 Я раздвоился из основного репозитория и клонировал раздвоенный репозиторий в своей системе. Мне не нравится раздвоенный рабочий процесс Github и я хочу вернуться к обычному рабочему процессу Github. Я не хочу удалять свой раздвоенный репозиторий из системы и клонировать его из основного...
+			</p>
+		</li>
+		
+	
+
+	
+
+	
+
+	
+
+</ul>
+</div>
+<div class="ads">
+
+<script async="" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/f.txt"></script>
+<!-- coderoad-square-300x250 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1392785890131419" data-ad-slot="3453857836"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+</div>
+
+
+
+
+
+
+<hr id="31836086">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+104<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Многие ответы заканчиваются тем, что ваш fork  <strong>один коммит опережает</strong>  Родительский репозиторий. Этот ответ суммирует найденные  <a href="http://2buntu.com/articles/1459/keeping-your-forked-repo-synced-with-the-upstream-source/" rel="nofollow noreferrer">здесь</a>  шаги, которые  <strong>переместят ваш fork в ту же фиксацию(коммит), что и родительский</strong> .
+
+
+</p>
+
+
+<ol>
+<li><p>Измените каталог на свой локальный репозиторий.
+
+</p>
+
+
+<ul>
+<li>Переключитесь на главную ветвь, если вы не  <code>git checkout master</code>
+
+
+
+ </li>
+</ul></li>
+
+<li><p>Добавьте родителя в качестве удаленного репозитория,  <code>git remote add upstream &lt;repo-location&gt;</code>
+
+ </p></li>
+
+<li>Выпуск  <code>git fetch upstream</code>
+
+ </li>
+
+<li><p>Выпуск  <code>git rebase upstream/master</code>
+
+ </p>
+
+
+<ul>
+<li>На этом этапе вы проверяете, что фиксирует то, что будет объединено, набрав  <code>git status</code>
+
+
+
+ </li>
+</ul></li>
+
+<li><p>Выпуск  <code>git push origin master</code>
+
+
+ </p></li>
+</ol>
+
+
+<p>Дополнительные сведения об этих командах см. В  <a href="http://2buntu.com/articles/1459/keeping-your-forked-repo-synced-with-the-upstream-source/" rel="nofollow noreferrer">шаге 3</a> .</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#31836086" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Sahar Rabinoviz</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">05 августа 2015 в 14:59</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="41448584">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+52<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Если, как и я, вы  <strong>никогда ничего не поручаете непосредственно мастеру</strong> , что вы действительно должны делать, вы можете сделать следующее.
+</p>
+
+
+<p>Из локального клона вашего fork создайте свой вышестоящий пульт дистанционного управления. Вам нужно сделать это только один раз:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git remote </span><span class="kwd">add</span><span class="pln"> upstream https</span><span class="pun">:</span><span class="com">//github.com/whoever/whatever.git</span></code></pre>
+
+
+
+<p>Затем всякий раз, когда вы хотите догнать вышестоящую главную ветвь репозитория, вам нужно:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git checkout master
+git pull upstream master</span></code></pre>
+
+
+
+<p>Предполагая, что вы никогда ничего не совершали по отношению к самому мастеру, вы уже должны быть сделаны. Теперь вы можете подтолкнуть свой локальный мастер к исходному удаленному GitHub fork. Вы также можете перебазировать свою ветвь разработки на ваш теперь up-to-date локальный мастер.
+</p>
+
+
+<p>После первоначальной настройки upstream и проверки master все, что вам нужно сделать, это выполнить следующую команду для синхронизации вашего master с upstream:  <strong>git pull upstream master</strong> .</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#41448584" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Slion</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">03 января 2017 в 16:59</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="36035604">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+51<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+ <p><strong>Предисловие:</strong>  ваш fork - это "origin", а хранилище, из которого вы раздвоились, - это "upstream".
+</p>
+
+
+<p>Предположим, что вы уже клонировали свой fork на свой компьютер с помощью такой команды:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git clone git@github</span><span class="pun">.</span><span class="pln">com</span><span class="pun">:</span><span class="pln">your_name</span><span class="pun">/</span><span class="pln">project_name</span><span class="pun">.</span><span class="pln">git
+cd project_name</span></code></pre>
+
+
+
+ <p><strong>Если это дано, то вам нужно продолжать в этом порядке</strong>:
+
+
+ </p>
+
+
+<ol>
+<li><p>Добавьте "upstream" в свой клонированный репозиторий ("origin"):
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git remote </span><span class="kwd">add</span><span class="pln"> upstream git@github</span><span class="pun">.</span><span class="pln">com</span><span class="pun">:</span><span class="pln">original_author</span><span class="pun">/</span><span class="pln">project_name</span><span class="pun">.</span><span class="pln">git</span></code></pre>
+
+
+</li>
+
+<li><p>Извлеките коммиты (и ветви) из "upstream":
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git fetch upstream</span></code></pre>
+
+
+</li>
+
+<li><p>Переключитесь на ветвь "master" вашего fork ("origin"):
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git checkout master</span></code></pre>
+
+
+</li>
+
+<li><p>Спрячьте изменения вашей ветви "master":
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git stash</span></code></pre>
+
+
+</li>
+
+<li><p>Объедините изменения из ветви "master" ветви "upstream" в ветвь "master" ветви "origin":
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git merge upstream</span><span class="pun">/</span><span class="pln">master</span></code></pre>
+
+
+</li>
+
+<li><p>Разрешите конфликты слияния, если таковые имеются, и зафиксируйте слияние
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git commit </span><span class="pun">-</span><span class="pln">am </span><span class="str">"Merged from upstream"</span></code></pre>
+
+
+</li>
+
+<li><p>Внесите изменения в свой fork
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git push</span></code></pre>
+
+
+</li>
+
+<li><p>Верните свои припрятанные изменения (если таковые имеются)
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git stash pop</span></code></pre>
+
+
+</li>
+
+<li><p>С тобой покончено! Поздравляю!
+
+
+</p></li>
+</ol>
+
+
+<p>GitHub также содержит инструкции по этой теме:  <a href="https://help.github.com/articles/syncing-a-fork/" rel="nofollow noreferrer">синхронизация fork </a></p><a href="https://help.github.com/articles/syncing-a-fork/" rel="nofollow noreferrer">
+ 
+
+</a>
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#36035604" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Benny Neugebauer</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">16 марта 2016 в 12:24</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="35535086">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+46<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>С ноября 2013 года был открыт неофициальный запрос функции с GitHub, чтобы попросить их добавить очень простой и интуитивно понятный метод для синхронизации локального fork с восходящим потоком:
+
+</p>
+
+ <p><a href="https://github.com/isaacs/github/issues/121" rel="nofollow noreferrer">https://github.com/isaacs/github/issues/121</a>
+ </p>
+
+
+<p>Примечание: поскольку запрос функции является неофициальным, также рекомендуется связаться с  <code>support@github.com</code> , чтобы добавить свою поддержку для реализации такой функции. Неофициальный запрос функции, приведенный выше, может быть использован в качестве доказательства того, насколько велик интерес к этой реализации.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#35535086" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>isedwards</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">21 февраля 2016 в 10:42</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="39492868">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+24<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>На дату этого ответа GitHub не имеет ( <a href="https://github.com/blog/266-fast-forward-your-fork" rel="nofollow noreferrer">или я должен сказать, больше нет?</a> ) эта функция в веб-интерфейсе. Однако вы можете попросить  <code>support@github.com</code>  добавить свой голос за это.
+
+</p>
+
+ <p><strong>В то же время, GitHub bardiharborow пользователь создал инструмент, чтобы сделать именно это:</strong>
+  <a href="https://upriver.github.io/" rel="nofollow noreferrer">https://upriver.github.io</a>/
+ </p>
+
+
+<p>Источник здесь:  <a href="https://github.com/upriver/upriver.github.io" rel="nofollow noreferrer">https:/ / github.com / upriver/upriver.github.io </a></p><a href="https://github.com/upriver/upriver.github.io" rel="nofollow noreferrer">
+ 
+
+</a>
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#39492868" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Lucero</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">14 сентября 2016 в 14:22</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="36344404">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+20<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Если вы используете GitHub для Windows или Mac, то теперь у них есть функция обновления вилок одним щелчком мыши:
+
+</p>
+
+
+<ol>
+<li>Выберите Хранилище в UI.
+</li>
+
+<li>Нажмите кнопку "Обновить с user/branch"" вверху.
+</li>
+</ol>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#36344404" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Shital Shah</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">31 марта 2016 в 21:45</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="41712931">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+11<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>На самом деле, можно создать ветку в вашем fork из любого коммита восходящего потока в браузере:
+
+</p>
+
+
+<ul>
+<li>Откройте  <code>https://github.com/&lt;repo&gt;/commits/&lt;hash&gt;</code>, где  <em>РЕПО</em>  - это ваш fork, а  <em>hash</em> -полный hash коммит, который вы можете найти в вышестоящем веб-интерфейсе. Например, я могу открыть  <a href="https://github.com/max630/linux/commits/0aa0313f9d576affd7747cc3f179feb097d28990" rel="nofollow noreferrer">https://github.com/max630/linux/commits/0aa0313f9d576affd7747cc3f179feb097d28990</a>, который указывает на  <code>linux</code>   <code>master</code>  как время написания.
+</li>
+
+<li>Нажмите на кнопку" дерево:....".
+</li>
+
+<li>Введите имя новой ветви и нажмите  <kbd>Enter</kbd>
+
+
+ </li>
+</ul>
+
+ <p><a href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/gFNOd.png" rel="nofollow noreferrer"> <img src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/gFNOd.png" alt="Enter image description here"> </a>
+ </p>
+
+
+<p>Затем вы можете извлечь эту ветвь в свой локальный клон, и вам не придется возвращать все эти данные обратно в GitHub, когда вы нажимаете правки поверх этой фиксации(коммита). Или используйте веб-интерфейс, чтобы изменить что-то в этой ветке.
+</p>
+
+
+<p>Как это работает (это предположение, я не знаю, как именно это делает GitHub): форки совместно используют хранилище объектов и используют  <a href="https://git-scm.com/docs/gitnamespaces" rel="nofollow noreferrer">пространства</a>  имен для разделения ссылок пользователей. Таким образом, вы можете получить доступ ко всем коммитам через ваш fork, даже если они не существовали к моменту разветвления.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#41712931" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>max630</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">18 января 2017 в 06:41</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="46107537">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+10<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Я обновляю свои раздвоенные РЕПО с помощью этой строки:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git pull https</span><span class="pun">:</span><span class="com">//github.com/forkuser/forkedrepo.git branch</span></code></pre>
+
+
+
+<p>Используйте это, если вы не хотите добавлять еще одну удаленную конечную точку в свой проект, как и другие решения, опубликованные здесь. </p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#46107537" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Rafael Bravo</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">08 сентября 2017 в 02:00</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="34811153">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+9<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Выполните следующие действия. Я попробовал их, и это мне помогло.
+
+</p>
+
+ <p><strong>Выезд в ваш ветка</strong>
+
+
+ </p>
+
+ <blockquote>
+  <p><strong>Синтаксис:</strong>  git branch yourDevelopmentBranch
+ <br>
+  <strong>Пример:</strong>  git checkout мастер
+
+
+</p>
+</blockquote>
+
+ <p><strong>Потяните ветвь исходного репозитория для получения последнего кода</strong>
+
+
+ </p>
+
+ <blockquote>
+  <p><strong>Синтаксис:</strong>  git pull  <a href="https://github.com/tastejs/awesome-app-ideas" rel="nofollow noreferrer">https://github.com/tastejs/awesome-app-ideas</a>  master
+ <br>
+  <strong>Пример:</strong>  git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git  <a href="https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git" rel="nofollow noreferrer">имя</a>  ветви
+</p>
+</blockquote>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#34811153" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Venkat.R</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">15 января 2016 в 12:31</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="44508039">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+8<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>В дополнение к этому ответу я искал способ обновить все удаленные ветви моего клонированного РЕПО ( <em>origin</em> ) из  <em>восходящих</em>  ветвей за один раз. Вот как я это сделал.
+</p>
+
+
+<p>Это предполагает, что вы уже настроили  <em>вышестоящий</em>  удаленный указатель на исходный репозиторий (откуда был разветвлен  <em>origin</em> ) и синхронизировали его с  <code>git fetch upstream</code> .
+</p>
+
+
+<p>Затем запустите:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="kwd">for</span><span class="pln"> branch </span><span class="kwd">in</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">git ls</span><span class="pun">-</span><span class="pln">remote </span><span class="pun">--</span><span class="pln">heads upstream</span><span class="pun">|</span><span class="pln">sed </span><span class="str">'s#^.*refs/heads/##'</span><span class="pun">);</span><span class="pln"> </span><span class="kwd">do</span><span class="pln"> git push origin refs</span><span class="pun">/</span><span class="pln">remotes</span><span class="pun">/</span><span class="pln">upstream</span><span class="pun">/</span><span class="pln">$branch</span><span class="pun">:</span><span class="pln">refs</span><span class="pun">/</span><span class="pln">heads</span><span class="pun">/</span><span class="pln">$branch</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">done</span></code></pre>
+
+
+
+<p>Первая часть этой команды перечисляет все головки в  <em>вышестоящем</em>  удаленном РЕПО и удаляет префикс имени ветви SHA-1, за которым следует префикс имени ветви  <code>refs/heads/</code> .
+</p>
+
+
+<p>Затем для каждой из этих ветвей он перемещает локальную копию  <em>восходящей</em>  ветви удаленного отслеживания (<code>refs/remotes/upstream/&lt;branch&gt;</code>  на локальной стороне) непосредственно в удаленную ветвь на  <em>исходной</em>  стороне ( <code>refs/heads/&lt;branch&gt;</code>  на удаленной стороне).
+</p>
+
+
+<p>Любая из этих команд синхронизации ветвей может завершиться неудачей по одной из двух причин: либо  <em>вышестоящая</em>  ветвь была переписана, либо Вы перенесли коммиты на эту ветвь в свой fork. В первом случае, когда вы ничего не зафиксировали в ветке на вашем fork, безопасно нажать принудительно (добавьте переключатель <strong>-f</strong> ; т. е.  <code>git push -f</code>  в приведенной выше команде). В другом случае это нормально, так как ваша ветвь fork разошлась, и вы не можете ожидать, что команда синхронизации будет работать до тех пор, пока ваши коммиты не будут объединены обратно в  <em>восходящий</em> поток .</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#44508039" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Thomas Guyot-Sionnest</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">12 июня 2017 в 20:17</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="58965171">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+6<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p> <a href="https://github.com/apps/pull" rel="nofollow noreferrer">Приложение</a>  "Pull" - Это автоматическое решение set-up-and-forget. Он будет синхронизировать ветвь по умолчанию вашего fork с вышестоящим репозиторием.
+</p>
+
+
+<p>Посетите URL, Нажмите зеленую кнопку "Install" и выберите репозитории, в которых вы хотите включить автоматическую синхронизацию.
+</p>
+
+
+<p>Ветвь обновляется один раз в час непосредственно на GitHub, на вашем локальном компьютере вам нужно вытащить главную ветвь, чтобы убедиться, что ваша локальная копия синхронизирована.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#58965171" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>krlmlr</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">20 ноября 2019 в 23:53</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="47272619">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+4<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Android Studio теперь научился работать с GitHub fork репозиториями (вам даже не нужно добавлять "upstream" удаленных репозиториев консольной командой).
+</p>
+
+
+<p>Открыть меню  <em>VCS</em>  →  <em>Git</em>
+ </p>
+
+
+<p>И обратите внимание на два последних пункта всплывающего меню:
+
+
+
+</p>
+
+ <ul>
+<li><p><em>Перебазируйте мой GitHub fork</em>
+
+
+
+ </p></li>
+ <li><p><em>Создать Запрос На Вытягивание</em>
+
+
+ </p></li>
+</ul>
+
+
+<p>Попробуйте. Я использую первый для синхронизации своего локального репозитория. В любом случае ветви из родительского удаленного репозитория ("upstream") будут доступны в Android Studio после того, как вы нажмете кнопку "Rebase my GitHub fork", и вы сможете легко работать с ними.
+</p>
+
+
+<p>(Я использую Android Studio 3.0 с плагинами "Git integration" и "GitHub".)
+
+</p>
+
+ <p><a href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/2poHE.png" rel="nofollow noreferrer"> <img src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/2poHE.png" alt="Enter image description here"> </a></p><a href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/2poHE.png" rel="nofollow noreferrer">
+ 
+
+ </a>
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#47272619" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>alexshr</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">13 ноября 2017 в 20:03</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="56537066">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+4<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Если вы установите свой восходящий поток. Проверьте с  <code>git remote -v</code>, тогда этого будет достаточно.
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git fetch upstream
+git checkout master
+git merge </span><span class="pun">--</span><span class="kwd">no</span><span class="pun">-</span><span class="pln">edit upstream</span><span class="pun">/</span><span class="pln">master
+git push</span></code></pre>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#56537066" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>prosti</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">11 июня 2019 в 05:32</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="49204701">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+4<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Когда вы клонировали свой раздвоенный репозиторий, перейдите к каталогу, в котором находится ваш клон, и нескольким строкам в вашем Git Bash Terminal.
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ cd project</span><span class="pun">-</span><span class="pln">name
+
+$ git remote </span><span class="kwd">add</span><span class="pln"> upstream https</span><span class="pun">:</span><span class="com">//github.com/user-name/project-name.git</span><span class="pln">
+ </span><span class="com"># Adding the upstream -&gt; the main repo with which you wanna sync</span><span class="pln">
+
+$ git remote </span><span class="pun">-</span><span class="pln">v </span><span class="com"># you will see the upstream here </span><span class="pln">
+
+$ git checkout master </span><span class="com"># see if you are already on master branch</span><span class="pln">
+
+$ git fetch upstream</span></code></pre>
+
+
+
+<p>А там тебе хорошо идти. Все обновленные изменения в главном репозитории будут помещены в ваш репозиторий fork.
+</p>
+
+
+<p>Команда "fetch" незаменима для сохранения up-to-date в проекте: только при выполнении "git fetch" вы будете проинформированы об изменениях, которые ваши коллеги перенесли на удаленный сервер.
+</p>
+
+
+<p>Вы все еще можете посетить  <a href="https://help.github.com/articles/fetching-a-remote/" rel="nofollow noreferrer">здесь</a>  для получения дополнительных запросов</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#49204701" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Prateek Chanda</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">10 марта 2018 в 02:21</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="43571370">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+2<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Это зависит от размера вашего хранилища и от того, как вы его раздвоили.
+</p>
+
+
+<p>Если это довольно большой репозиторий, вы, возможно, хотели бы управлять им особым образом (например, drop history). В принципе, вы можете получить различия между текущей и вышестоящей версиями, зафиксировать их, а затем выбрать вишню обратно в мастер.
+</p>
+
+
+<p>Попробуйте прочитать вот  <a href="https://www.atlassian.com/blog/git/handle-big-repositories-git" rel="nofollow noreferrer">это</a> . Он описывает, как обращаться с большими репозиториями Git и как обрабатывать их с последними изменениями.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#43571370" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>s0nicYouth</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">23 апреля 2017 в 12:47</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="58966490">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+2<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Я хотел бы добавить к  <a href="https://stackoverflow.com/users/946850/krlmlr" rel="nofollow noreferrer">  ответу</a> @krlmlr's .
+ </p>
+
+
+<p>Изначально раздвоенный репозиторий имеет одну ветвь с именем:  <code>master</code> . Если вы работаете над новой функцией или исправлением, вы обычно создаете новую ветвь  <code>feature</code>  и вносите изменения.
+</p>
+
+
+<p>Если вы хотите, чтобы разветвленный репозиторий был синхронизирован с родительским репозиторием, вы можете настроить конфигурационный файл (<code>pull.yml</code> ) для  <a href="https://github.com/apps/pull" rel="nofollow noreferrer">приложения Pull</a>  (<em>в ветке feature</em>) следующим образом:
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pln">
+rules</span><span class="pun">:</span><span class="pln">
+  </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">base</span><span class="pun">:</span><span class="pln"> feature
+    upstream</span><span class="pun">:</span><span class="pln"> master
+    mergeMethod</span><span class="pun">:</span><span class="pln"> merge
+  </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">base</span><span class="pun">:</span><span class="pln"> master
+    upstream</span><span class="pun">:</span><span class="pln"> parent_repo</span><span class="pun">:</span><span class="pln">master
+    mergeMethod</span><span class="pun">:</span><span class="pln"> hardreset</span></code></pre>
+
+
+
+<p>Это сохраняет ветвь  <code>master</code>  разветвленного РЕПО up-to-date с родительским РЕПО.  Он сохраняет ветвь  <code>feature</code>  разветвленного РЕПО обновленной через ветвь  <code>master</code>  разветвленного РЕПО, объединяя их. Это предполагает, что ветвь  <code>feature</code>  является ветвью по умолчанию, которая содержит конфигурационный файл.
+</p>
+
+
+<p>Здесь в игру вступают два  <code>mergemethods</code> , один- <code>hardreset</code> , который помогает принудительно синхронизировать изменения в ветви  <code>master</code>  раздвоенного РЕПО с родительским РЕПО, а другой- <code>merge</code> . Этот метод используется для объединения изменений, сделанных вами в ветке  <code>feature</code> , и изменений, сделанных из-за принудительной синхронизации в ветке  <code>master</code> . В случае конфликта слияния приложение pull позволит вам выбрать следующий курс действий во время запроса pull.
+</p>
+
+
+<p>Вы можете прочитать о базовых и расширенных конфигурациях и различных  <code>mergemethods</code>   <a href="https://github.com/wei/pull/#getting-started" rel="nofollow noreferrer">здесь</a> .
+</p>
+
+
+<p>В настоящее время я использую эту конфигурацию в своем раздвоенном РЕПО  <a href="https://github.com/Saurabh702/notepad-plus-plus" rel="nofollow noreferrer">здесь</a> , чтобы убедиться, что запрошенное  <a href="https://coderoad.ru/20700696/">здесь</a>  улучшение остается обновленным.</p>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#58966490" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Saurabh P Bhandari</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">21 ноября 2019 в 02:44</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="56504442">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+1<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Есть две основные вещи, связанные с тем, чтобы разветвленный репозиторий всегда обновлялся навсегда.
+
+
+</p>
+
+ <blockquote>
+  <p><strong>1. Создайте ветви</strong>  из Мастера fork и внесите в них  <strong>изменения</strong> .
+
+</p>
+</blockquote>
+
+
+<p>Таким образом, когда ваш  <em>запрос на вытягивание</em>  будет принят, вы можете безопасно удалить ветвь, так как ваш внесенный код будет затем жить в вашем мастере вашего раздвоенного репозитория, когда вы обновите его с помощью восходящего потока. Благодаря этому ваш мастер всегда будет в чистом состоянии, чтобы создать новую ветвь, чтобы сделать еще одно изменение.
+
+
+</p>
+
+ <blockquote>
+  <p><strong>2. Создайте запланированное задание</strong>  для мастера fork для  <strong>автоматического обновления</strong>.
+
+</p>
+</blockquote>
+
+
+<p>Это можно сделать с помощью  <a href="https://en.wikipedia.org/wiki/Cron" rel="nofollow noreferrer"> <em>cron </em></a> . Вот пример кода, если вы делаете это в linux.
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">$ crontab </span><span class="pun">-</span><span class="pln">e</span></code></pre>
+
+
+
+<p>поместите этот код на  <code>crontab file</code> , чтобы выполнить задание ежечасно.
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="lit">0</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> sh </span><span class="pun">~/</span><span class="pln">cron</span><span class="pun">.</span><span class="pln">sh</span></code></pre>
+
+
+
+<p>затем создайте файл сценария  <code>cron.sh</code>  и  <a href="https://stackoverflow.com/a/56304600/4058484" rel="nofollow noreferrer"> <em>взаимодействие </em> </a> git с  <a href="https://www.ssh.com/ssh/agent" rel="nofollow noreferrer"> <em>ssh-агентом </em> </a> и / или  <a href="https://stackoverflow.com/a/55779022/4058484" rel="nofollow noreferrer"> <em>ожидайте </em> </a>, как показано ниже
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="com">#!/bin/sh</span><span class="pln">
+WORKDIR</span><span class="pun">=</span><span class="str">/path/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">your</span><span class="pun">/</span><span class="pln">dir   
+REPOSITORY</span><span class="pun">=&lt;</span><span class="pln">name </span><span class="kwd">of</span><span class="pln"> your repo</span><span class="pun">&gt;</span><span class="pln">
+MASTER</span><span class="pun">=</span><span class="str">"git@github.com:&lt;username&gt;/$REPOSITORY.git"</span><span class="pln">   
+UPSTREAM</span><span class="pun">=</span><span class="pln">git@github</span><span class="pun">.</span><span class="pln">com</span><span class="pun">:&lt;</span><span class="pln">upstream</span><span class="pun">&gt;/&lt;</span><span class="pln">name </span><span class="kwd">of</span><span class="pln"> the repo</span><span class="pun">&gt;.</span><span class="pln">git  
+
+cd $WORKDIR </span><span class="pun">&amp;&amp;</span><span class="pln"> rm </span><span class="pun">-</span><span class="pln">rf $REPOSITORY
+</span><span class="kwd">eval</span><span class="pln"> </span><span class="str">`ssh-agent`</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> expect </span><span class="pun">~</span><span class="str">/.ssh/</span><span class="pln">agent </span><span class="pun">&amp;&amp;</span><span class="pln"> ssh</span><span class="pun">-</span><span class="kwd">add</span><span class="pln"> </span><span class="pun">-</span><span class="pln">l
+git clone $MASTER </span><span class="pun">&amp;&amp;</span><span class="pln"> cd $REPOSITORY </span><span class="pun">&amp;&amp;</span><span class="pln"> git checkout master
+git remote </span><span class="kwd">add</span><span class="pln"> upstream $UPSTREAM </span><span class="pun">&amp;&amp;</span><span class="pln"> git fetch </span><span class="pun">--</span><span class="pln">prune upstream
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">`git rev-list HEAD...upstream/master --count`</span><span class="pln"> </span><span class="pun">-</span><span class="pln">eq </span><span class="lit">0</span><span class="pln"> </span><span class="pun">]</span><span class="pln">
+</span><span class="kwd">then</span><span class="pln">
+    echo </span><span class="str">"all the same, do nothing"</span><span class="pln">
+</span><span class="kwd">else</span><span class="pln">
+    echo </span><span class="str">"update exist, do rebase!"</span><span class="pln">
+    git reset </span><span class="pun">--</span><span class="pln">hard upstream</span><span class="pun">/</span><span class="pln">master
+    git push origin master </span><span class="pun">--</span><span class="pln">force
+</span><span class="kwd">fi</span><span class="pln">
+cd $WORKDIR </span><span class="pun">&amp;&amp;</span><span class="pln"> rm </span><span class="pun">-</span><span class="pln">rf $REPOSITORY
+</span><span class="kwd">eval</span><span class="pln"> </span><span class="str">`ssh-agent -k`</span></code></pre>
+
+
+
+<p>Проверьте свой раздвоенный репозиторий. Время от времени он всегда будет показывать это уведомление:
+
+
+</p>
+
+ <blockquote>
+  <p><strong>Эта ветвь даже с  <code>&lt;upstream&gt;</code>: master</strong> .
+
+
+</p>
+</blockquote>
+
+ <p><a href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/screencapture-github.png" rel="nofollow noreferrer"> <img src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/screencapture-github.png" alt="enter image description here"> </a></p><a href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/screencapture-github.png" rel="nofollow noreferrer">
+ 
+
+ </a>
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#56504442" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Chetabahana</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">08 июня 2019 в 07:33</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<hr id="60132971">
+<div class="row pt-1 pb-2">
+<div class="col-md-1 col-sm-2 votes text-muted d-none d-sm-block">
+
+<i class="fa fa-angle-up "></i><br>
+0<br>
+<i class="fa fa-angle-down"></i><br>
+</div>
+<div class="col-md-11 col-sm-10 col-xs-12 answer text-break">
+<p>Используйте эти команды (в счастливом случае)
+</p>
+
+
+<pre class="prettyprint-override prettyprinted" style=""><code><span class="pln">git remote </span><span class="pun">-</span><span class="pln">v
+git pull
+git fetch upstream
+git checkout master
+git merge upstream</span><span class="pun">/</span><span class="pln">master </span><span class="pun">--</span><span class="kwd">no</span><span class="pun">-</span><span class="pln">ff
+git </span><span class="kwd">add</span><span class="pln"> </span><span class="pun">.</span><span class="pln">
+git commit </span><span class="pun">-</span><span class="pln">m</span><span class="str">"Sync with upstream repository."</span><span class="pln">
+git push </span><span class="pun">-</span><span class="pln">v</span></code></pre>
+ 
+
+
+ 
+
+</div>
+</div>
+<div class="d-flex justify-content-between">
+
+<button type="button" class="btn btn-link btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="https://coderoad.ru/7244321/Как-обновить-раздвоенный-репозиторий-GitHub#60132971" title="" data-original-title="Скопировать адрес">
+<small><i class="far fa-copy"></i> Поделиться</small>
+</button>
+
+
+<small class="d-flex align-items-center text-muted">
+<b>Do Nhu Vy</b> &nbsp; &nbsp;
+
+ <i class="d-none d-sm-inline">09 февраля 2020 в 02:20</i>
+ 
+</small>
+</div>
+
+
+
+
+
+
+
+<!--noindex-->
+<br><br>
+<hr>
+<div class="sidebar-header">
+	<h4>Похожие вопросы:</h4>
+</div>
+
+
+	
+	
+	<br>
+		<a href="https://coderoad.ru/3903817/%D0%92%D1%8B%D1%82%D1%8F%D0%BD%D0%B8%D1%82%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8%D0%B7-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F-GitHub-%D0%B2-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9">Вытяните новые обновления из исходного репозитория GitHub в раздвоенный репозиторий GitHub</a>
+		<p class="text-break small">
+		 Я разветвил чей-то репозиторий на GitHub и хотел бы обновить свою версию коммитами и обновлениями, сделанными в исходном репозитории. Они были сделаны после того, как я раздвоил свою копию. Как я...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/13574499/%D0%9A%D0%B0%D0%BA-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D0%B8%D0%B7-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE-%D0%B1%D1%8B%D0%BB-%D1%80%D0%B0%D0%B7%D0%B2%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD-%D0%BC%D0%BE%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9">Как изменить репозиторий GitHub, из которого был разветвлен мой репозиторий?</a>
+		<p class="text-break small">
+		 Я разветвил репозиторий GitHub под названием masteruser/reponame на myuser/reponame., когда я посмотрел на его страницу, он сказал: myuser/reponame, раздвоенный от masteruser/reponame Другой...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/14384007/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-TortoiseGIT">Как обновить раздвоенный репозиторий GitHub с помощью TortoiseGIT?</a>
+		<p class="text-break small">
+		 Я разветвил репозиторий, внес некоторые изменения, отправил запрос на вытягивание и мои изменения были приняты. Теперь, несколько месяцев спустя, в моем ветке нет никаких изменений, внесенных...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/30790301/%D0%92%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-github-%D0%B8-%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D1%81%D0%BA%D1%80%D1%83%D1%82%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9">Владение на github и как раскрутить репозиторий?</a>
+		<p class="text-break small">
+		 У меня есть несколько вопросов о репозитории Github. 1) Как проверить право собственности на раздвоенный репозиторий. 2) Как удалить репозиторий из моего аккаунта (не удаляя его из чужого аккаунта....
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/39312655/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D1%8F-GitHub-pull-request">Как обновить после слияния GitHub pull request?</a>
+		<p class="text-break small">
+		 У меня есть проблема с пониманием рабочего процесса на GitHub. Сначала я fork чей-то репозиторий. Я клонирую репозиторий локально( на своем компьютере) Я создаю ветку под названием Sample101 и вношу...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/40795688/%D0%A1%D1%82%D1%80%D1%83%D1%87%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9">Стручки-как использовать раздвоенный репозиторий?</a>
+		<p class="text-break small">
+		 У меня возникли проблемы с обновлением моей капсулы от моей раздвоенной repository..keep становится: [!] Не удалось найти спецификацию для 'QMChatViewController'. story...I разветвили хранилище, вот...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/45475227/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-Github-Fork-%D0%B8-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C-%D1%82%D0%BE%D1%82-%D0%B6%D0%B5-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BB%D0%BE%D0%BD-%D0%B2-%D0%BC%D0%BE%D0%B5%D0%B9">Как удалить рабочий процесс Github Fork и указать тот же локальный клон в моей системе в главный репозиторий</a>
+		<p class="text-break small">
+		 Я раздвоился из основного репозитория и клонировал раздвоенный репозиторий в своей системе. Мне не нравится раздвоенный рабочий процесс Github и я хочу вернуться к обычному рабочему процессу Github....
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/55369994/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE-%D1%81%D1%82%D0%BE%D0%BB%D0%B0-GitHub">Как обновить раздвоенный репозиторий GitHub с помощью рабочего стола GitHub?</a>
+		<p class="text-break small">
+		 Я раздвоенный репозитория, используя GitHub рабочего стола и внесли некоторые изменения. Теперь я хочу проверить эти изменения в базовом репозитории? Я хочу получить изменения из базового...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/47917566/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F">Как обновить раздвоенный репозиторий GitHub с помощью подмодуля</a>
+		<p class="text-break small">
+		 Мой вопрос аналогичен следующему: Как обновить раздвоенный репозиторий GitHub? Но это немного сложно, потому что мой апстрим-это очень большой проект, в котором много подмодулей. git remote -v...
+		</p>
+	
+	
+	
+	
+	<br>
+		<a href="https://coderoad.ru/56004973/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%BD%D0%B0-github">Как обновить репозиторий текущего проекта на github?</a>
+		<p class="text-break small">
+		 Я загрузил свой проект на github с помощью intellij IDE, но мне нужно знать, как обновить загруженный репозиторий на github, когда я добавляю новый код ? 
+		</p>
+	
+	
+	
+
+<!--/noindex-->
+
+
+					</div>
+					<div class="col-xl-3 col-lg-12 bg-white">
+						<div class="sticky-top pt-4" style="z-index: 1000">
+						 
+
+
+
+<nav class="sidebar d-none d-xl-block pt-1">
+	<div class="sidebar-header">
+		<h5>Похожие вопросы</h5>
+	</div>
+	<ul class="list-unstyled pt-2">
+	
+		
+		<li>
+			<a href="https://coderoad.ru/3903817/%D0%92%D1%8B%D1%82%D1%8F%D0%BD%D0%B8%D1%82%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8%D0%B7-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F-GitHub-%D0%B2-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9" class="nav-link">Вытяните новые обновления из исходного репозитория GitHub в раздвоенный репозиторий GitHub</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/13574499/%D0%9A%D0%B0%D0%BA-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D0%B8%D0%B7-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE-%D0%B1%D1%8B%D0%BB-%D1%80%D0%B0%D0%B7%D0%B2%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD-%D0%BC%D0%BE%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9" class="nav-link">Как изменить репозиторий GitHub, из которого был разветвлен мой репозиторий?</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/14384007/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-TortoiseGIT" class="nav-link">Как обновить раздвоенный репозиторий GitHub с помощью TortoiseGIT?</a>
+		</li>
+		
+		
+			
+		
+		<br>
+		<li style="text-align: center;" class="ads">
+			
+			<iframe data-id="coderoad.ru_240x400_right_sticky_DFP" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" width="1" height="1" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/saved_resource.html"></iframe>
+			<script>
+			    (function () {
+			        var size='240x400|300x250',
+			            adunit = 'coderoad.ru_240x400_right_sticky_DFP',
+			            xmlhttp = new XMLHttpRequest();
+			        xmlhttp.onreadystatechange = function(){if (xmlhttp.readyState == 4 && xmlhttp.status == 200){var es = document.querySelectorAll("[data-id='"+adunit+"']");var e = Array.from(es).find(function(e) {return !e.hasAttribute("data-rendered")});if(e){var iframe = e.contentWindow.document;iframe.open();iframe.write(xmlhttp.responseText);iframe.close();e.setAttribute('data-rendered', true)}}};xmlhttp.open("GET", 'https://pubads.g.doubleclick.net/gampad/adx?iu=/147246189/'+adunit+'&sz='+encodeURI(size)+'&t=Placement_type%3Dserving&'+Date.now(), true);xmlhttp.send();})();
+			</script>
+		
+		</li>
+		<br>
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/30790301/%D0%92%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-github-%D0%B8-%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D1%81%D0%BA%D1%80%D1%83%D1%82%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9" class="nav-link">Владение на github и как раскрутить репозиторий?</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/39312655/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D1%8F-GitHub-pull-request" class="nav-link">Как обновить после слияния GitHub pull request?</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/40795688/%D0%A1%D1%82%D1%80%D1%83%D1%87%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9" class="nav-link">Стручки-как использовать раздвоенный репозиторий?</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/45475227/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-Github-Fork-%D0%B8-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C-%D1%82%D0%BE%D1%82-%D0%B6%D0%B5-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BB%D0%BE%D0%BD-%D0%B2-%D0%BC%D0%BE%D0%B5%D0%B9" class="nav-link">Как удалить рабочий процесс Github Fork и указать тот же локальный клон в моей системе в главный репозиторий</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/55369994/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE-%D1%81%D1%82%D0%BE%D0%BB%D0%B0-GitHub" class="nav-link">Как обновить раздвоенный репозиторий GitHub с помощью рабочего стола GitHub?</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/47917566/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-GitHub-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" class="nav-link">Как обновить раздвоенный репозиторий GitHub с помощью подмодуля</a>
+		</li>
+		
+		
+			
+		
+	
+	
+		
+		<li>
+			<a href="https://coderoad.ru/56004973/%D0%9A%D0%B0%D0%BA-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9-%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%BD%D0%B0-github" class="nav-link">Как обновить репозиторий текущего проекта на github?</a>
+		</li>
+		
+		
+			
+		
+	
+	
+	</ul>
+</nav>
+
+<nav class="sidebar d-none d-sm-block d-md-block ">
+	<div class="sidebar-header">
+		<h5>Другие вопросы</h5>
+	</div>
+	<ul class="list-unstyled ">
+	
+		
+		<li>
+			<a href="https://coderoad.ru/10612351/%D0%9A%D0%B0%D0%BA-%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-Global-asax" class="nav-link">Как Работает Global.asax?</a>
+
+		</li>
+		
+	
+		
+		<li>
+			<a href="https://coderoad.ru/22243850/%D0%9D%D0%B5-%D1%83%D0%B4%D0%B0%D0%BB%D0%BE%D1%81%D1%8C-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D1%8C-%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D1%83-%D1%81-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC-Gradle-%D0%B4%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%B8%D0%B2%D0%B0-http-services" class="nav-link">Не удалось выполнить сборку с использованием Gradle дистрибутива 'http:/ /...</a>
+
+		</li>
+		
+	
+		
+		<li>
+			<a href="https://coderoad.ru/34854377/%D0%9A%D0%B0%D0%BA-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D1%8C-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D1%80%D0%BD%D0%B5%D0%B2%D0%BE%D0%B9-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0" class="nav-link">Как изменить рабочее пространство и построить корневой каталог записи на...</a>
+
+		</li>
+		
+	
+		
+		<li>
+			<a href="https://coderoad.ru/48481765/%D0%9E%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D1%80%D1%83%D0%B9%D1%82%D0%B5-%D0%BF%D0%BE%D0%BF%D0%BB%D0%B0%D0%B2%D0%BE%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2%D0%BF%D1%80%D0%B0%D0%B2%D0%BE" class="nav-link">Отформатируйте поплавок для выравнивания вправо</a>
+
+		</li>
+		
+	
+		
+		<li>
+			<a href="https://coderoad.ru/62191482/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D1%84%D0%BE%D1%80%D0%BC-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0-%D0%BD%D0%B0-%D1%84%D0%BE%D1%80%D0%BC%D0%B5-%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C" class="nav-link">Генератор форм ввода на форме представить</a>
+
+		</li>
+		
+	
+	</ul>
+</nav> 
+
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<iframe data-id="coderoad.ru_728x90_sticky_anchor_DFP" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" width="1" height="1" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/saved_resource(1).html"></iframe>
+	<script>
+	    (function () {
+	        var size='728x90|320x100',
+	            adunit = 'coderoad.ru_728x90_sticky_anchor_DFP',
+	            xmlhttp = new XMLHttpRequest();
+	        xmlhttp.onreadystatechange = function(){if (xmlhttp.readyState == 4 && xmlhttp.status == 200){var es = document.querySelectorAll("[data-id='"+adunit+"']");var e = Array.from(es).find(function(e) {return !e.hasAttribute("data-rendered")});if(e){var iframe = e.contentWindow.document;iframe.open();iframe.write(xmlhttp.responseText);iframe.close();e.setAttribute('data-rendered', true)}}};xmlhttp.open("GET", 'https://pubads.g.doubleclick.net/gampad/adx?iu=/147246189/'+adunit+'&sz='+encodeURI(size)+'&t=Placement_type%3Dserving&'+Date.now(), true);xmlhttp.send();})();
+	</script>
+	
+
+	<!-- Optional JavaScript -->
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/jquery-3.2.1.slim.min.5f48fc77cac9.js.download" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/bootstrap.bundle.min.a454220fc070.js.download"></script>
+	<link rel="stylesheet" href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/autocomplete-2.7.0.889b07d03339.css" type="text/css">
+	<script src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/autocomplete-2.7.0.49a72778714e.js.download"></script>
+	<script src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/jquery.iframetracker.min.c28ccca6de79.js.download"></script>
+	
+	<script type="text/javascript">
+function submit_form() {
+	if (document.querySelector("div.autocomplete li.active")) {
+		return false;
+	} else {
+		document.getElementById('search_form').submit();	
+	}
+}
+AutoComplete({
+     EmptyMessage: "No item found",
+     Url: '/search/autocomplete/',
+     _Select : function(item) {
+    	 if (item.hasAttribute("data-autocomplete-value")) {
+             this.Input.value = item.getAttribute("data-autocomplete-value");
+         }
+         else {
+             this.Input.value = item.innerHTML;
+         }
+         this.Input.setAttribute("data-autocomplete-old-value", this.Input.value);
+    	 document.getElementById('search_form').submit();
+     },
+     _Focus: function () {
+         var oldValue = this.Input.getAttribute("data-autocomplete-old-value");
+         if ((!oldValue || this.Input.value != oldValue) && this._MinChars() <= this.Input.value.length) {
+             this.DOMResults.setAttribute("class", "autocomplete open shadow");
+         }
+     },
+     _Position: function () {
+         this.DOMResults.setAttribute("class", "autocomplete");
+         this.DOMResults.setAttribute("style", "top:" + (this.Input.offsetTop + this.Input.offsetHeight+5) + "px;left:" + this.Input.offsetLeft + "px;width:" + (this.Input.clientWidth-25) + "px;");
+     },
+     _RenderResponseItems: function (response) {
+         var ul = document.createElement("ul"), li = document.createElement("li"), limit = this._Limit();
+         ul.setAttribute("class", "mdc-list");
+         // Order
+         if (limit < 0) {
+             response = response.reverse();
+         }
+         else if (limit === 0) {
+             limit = response.length;
+         }
+         for (var item = 0; item < Math.min(Math.abs(limit), response.length); item++) {
+             li.innerHTML = response[item].Label;
+             li.setAttribute("data-autocomplete-value", response[item].Value);
+             li.setAttribute("class", "mdc-list-item");
+             ul.appendChild(li);
+             li = document.createElement("li");
+         }
+         return ul;
+     },
+});
+
+ </script>
+ <script type="text/javascript">
+ function copyToClipboard(text, el) {
+	  var copyTest = document.queryCommandSupported('copy');
+	  var elOriginalText = el.attr('data-original-title');
+
+	  if (copyTest === true) {
+	    var copyTextArea = document.createElement("textarea");
+	    copyTextArea.value = text;
+	    document.body.appendChild(copyTextArea);
+	    copyTextArea.select();
+	    try {
+	      var successful = document.execCommand('copy');
+	      var msg = successful ? 'Скопировано!' : 'Whoops, not copied!';
+	      el.attr('data-original-title', msg).tooltip('show');
+	    } catch (err) {
+	      console.log('Oops, unable to copy');
+	    }
+	    document.body.removeChild(copyTextArea);
+	    el.attr('data-original-title', elOriginalText);
+	  } else {
+	    // Fallback if browser doesn't support .execCommand('copy')
+	    window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+	  }
+	}
+
+	$(document).ready(function() {
+	  // Initialize
+	  // ---------------------------------------------------------------------
+
+	  // Tooltips
+	  // Requires Bootstrap 3 for functionality
+	  $('.js-tooltip').tooltip();
+
+	  // Copy to clipboard
+	  // Grab any text in the attribute 'data-copy' and pass it to the 
+	  // copy function
+	  $('.js-copy').click(function() {
+	    var text = $(this).attr('data-copy');
+	    var el = $(this);
+	    copyToClipboard(text, el);
+	  });
+	});
+ </script>
+ <script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('.ads iframe').iframeTracker({
+			blurCallback: function(event) {
+				// Do something when the iframe is clicked (like firing an XHR request)
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				    if (this.readyState == 4 && this.status == 200) {
+				       // Typical action to be performed when the document is ready:
+				    }
+				};
+				xhttp.open("GET", "/ads_clicked/?time=" + new Date().getTime(), true);
+				xhttp.send();
+			}
+		});
+	});
+</script>
+	
+	
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+<link rel="stylesheet" type="text/css" href="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/prettify.01f71d0ca100.css">
+<script type="text/javascript" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/prettify.f7387b55d316.js.download"></script>
+<script type="text/javascript">
+	PR.prettyPrint()
+</script>
+
+	
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Как обновить раздвоенный репозиторий GitHub_ - CodeRoad_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113193516-3');
+  setTimeout("gtag('event', 'view', {'event_category' : 'page',  'event_label' : '15-seconds-view'})",15000);
+</script>
+
+
+
+
+
+
+
+<div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text" value="" id="focus_retriever" readonly="true"></div></body></html>
