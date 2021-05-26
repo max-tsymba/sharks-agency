@@ -197,7 +197,7 @@
 // Header Content
 .header__content{
     position: absolute;
-    top: 40%;
+    top: 42%;
     max-width: 960px;
     margin: 0 auto;
     left: 0;
@@ -291,6 +291,26 @@
     }
 }
 
+.setlocale{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+}
+
+.setlocale-group{
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.setlocale-btn{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    letter-spacing: 1px;
+}
 
 /* ABOUT */
 .about{

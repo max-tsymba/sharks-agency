@@ -500,7 +500,7 @@ function mobileMenu() {
     
     const menuBtn = document.querySelector('.hamburger__menu'),
           menu = document.querySelector('.menu'),
-          lineRoll = document.querySelectorAll('.line-roll');
+          lineRoll = document.querySelectorAll('.roll-menu');
     let isOpen = false;
     const html = document.querySelector('html');
 
@@ -532,3 +532,6 @@ function mobileMenu() {
         html.style.overflow = 'scroll';
     });
 }
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Localization
