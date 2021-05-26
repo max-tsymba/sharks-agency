@@ -60,7 +60,6 @@ $(function(){
         $('.footer__box').addClass('active-2');   
     }); 
 
-
     $('.slider-center').slick({
 
         autoplay: true,
@@ -148,7 +147,6 @@ function preLoader() {
     const logoSpan = document.querySelectorAll('.intro__logo-elem');
     const block = document.getElementById('first-block');
     const itemBlock = document.querySelectorAll('.fullpage__item');
-    const html = document.querySelector('html');
 
     const mobileMedia = window.matchMedia("(max-width: 769px)");
 
@@ -504,10 +502,12 @@ function mobileMenu() {
           menu = document.querySelector('.menu'),
           lineRoll = document.querySelectorAll('.line-roll');
     let isOpen = false;
+    const html = document.querySelector('html');
 
     menuBtn.addEventListener('click', ()=>{
 
         if(!isOpen) {
+            html.style.overflow = 'hidden';
             menuBtn.classList.add('open');
             menu.classList.add('active');
             
@@ -516,6 +516,7 @@ function mobileMenu() {
             }
             isOpen = true;
         } else {
+            html.style.overflow = 'scroll';
             menuBtn.classList.remove('open');
             menu.classList.remove('active');
             for(let i=0;i<lineRoll.length; i++) {
@@ -528,5 +529,6 @@ function mobileMenu() {
     $('a[id^=btn]').on('click', function(){
         menuBtn.classList.remove('open');
         menu.classList.remove('active');
+        html.style.overflow = 'scroll';
     });
 }

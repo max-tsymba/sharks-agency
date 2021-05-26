@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
     html{
         overflow: scroll;
-        // scroll-behavior: smooth;
+        scroll-behavior: smooth;
     }
 }
 
@@ -616,5 +616,21 @@
         span{
             font-size: 30px;
         }
+    }
+}
+
+@media (max-width: 376px) {
+    .contact-us {
+        span{
+            font-size: 26px;
+        }
+    }
+
+    .form__btn{
+        padding: 10px 10px;
+    }
+
+    .fileUpload-btn{
+        padding: 10px 10px;
     }
 }
