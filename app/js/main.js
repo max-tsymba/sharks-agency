@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     circleText();
     fileUpload();
     popupQueary();
+    mobileMenu();
 
 });
 
@@ -147,8 +148,9 @@ function preLoader() {
     const logoSpan = document.querySelectorAll('.intro__logo-elem');
     const block = document.getElementById('first-block');
     const itemBlock = document.querySelectorAll('.fullpage__item');
+    const html = document.querySelector('html');
 
-    const mobileMedia = window.matchMedia("(max-width: 768px)");
+    const mobileMedia = window.matchMedia("(max-width: 769px)");
 
     setTimeout(()=>{
 
@@ -179,8 +181,6 @@ function preLoader() {
                 fullPageScrolling();
             }
         },4600);
-
-        
 
     });
 
@@ -288,6 +288,13 @@ function circleText() {
 // MODULES-----------------------------------------------------------------------------------------------------------------
 function linkPageTranslating(WRAPPER) {
 
+    const mobileMedia = window.matchMedia("(max-width: 826px)");
+
+    let sec = 20;
+    if(mobileMedia.matches) {
+        sec = 1000;
+    }
+
     $('a[id^=btn]').on('click', function (e) {
 
         e.preventDefault();
@@ -297,19 +304,29 @@ function linkPageTranslating(WRAPPER) {
                     WRAPPER.style.transform = 'translateY(0vh)';
                 break;
             case "btn-about":
-                    WRAPPER.style.transform = 'translateY(-100vh)';
+                    setTimeout(function(){
+                        WRAPPER.style.transform = 'translateY(-100vh)';
+                    }, sec);
                 break;
             case "btn-services":
+                setTimeout(function(){
                     WRAPPER.style.transform = 'translateY(-200vh)';
+                }, sec);
                 break;
             case "btn-team":
-                WRAPPER.style.transform = 'translateY(-300vh)';
+                setTimeout(function(){
+                    WRAPPER.style.transform = 'translateY(-300vh)';
+                }, sec);
                 break;
             case "btn-contact":
-                WRAPPER.style.transform = 'translateY(-400vh)';
+                setTimeout(function(){
+                    WRAPPER.style.transform = 'translateY(-400vh)';
+                }, sec);
                 break;
             default: 
-                WRAPPER.style.transform = 'translateY(0vh)';
+                setTimeout(function(){
+                    WRAPPER.style.transform = 'translateY(-500vh)';
+                }, sec);
                 break;
         }
     });
@@ -395,7 +412,6 @@ function Reset(form) {
 
 // -------------------------------------------------------------------------------------------------------------------------
 // Forms Inputs Validator
-
 function formAddError(input) {
     input.parentElement.classList.add('_error');
     input.classList.add('_error');
@@ -428,7 +444,6 @@ function phoneTest(input) {
 
 // -------------------------------------------------------------------------------------------------------------------------
 // Upload File Function
-
 function uploadFile(file) {
          
     let reader = new FileReader();
@@ -443,7 +458,6 @@ function uploadFile(file) {
 
 // -------------------------------------------------------------------------------------------------------------------------
 // Form Validate
-
 function formValidate(form, formReq, formLabel, reqe, labele) {
     let error = 0;
 
@@ -480,4 +494,39 @@ function formValidate(form, formReq, formLabel, reqe, labele) {
 
     }
     return error;
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Mobile Menu
+function mobileMenu() {
+    
+    const menuBtn = document.querySelector('.hamburger__menu'),
+          menu = document.querySelector('.menu'),
+          lineRoll = document.querySelectorAll('.line-roll');
+    let isOpen = false;
+
+    menuBtn.addEventListener('click', ()=>{
+
+        if(!isOpen) {
+            menuBtn.classList.add('open');
+            menu.classList.add('active');
+            
+            for(let i=0;i<lineRoll.length; i++) {
+                lineRoll[i].classList.add('active');
+            }
+            isOpen = true;
+        } else {
+            menuBtn.classList.remove('open');
+            menu.classList.remove('active');
+            for(let i=0;i<lineRoll.length; i++) {
+                lineRoll[i].classList.remove('active');
+            }
+            isOpen = false;
+        }
+    });
+
+    $('a[id^=btn]').on('click', function(){
+        menuBtn.classList.remove('open');
+        menu.classList.remove('active');
+    });
 }

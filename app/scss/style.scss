@@ -10,7 +10,7 @@
     margin: 0 auto;
     min-height: 100vh;
     padding: 0 15px;
-    position: relative;
+    position: static;
 }
 
 .cont-1120 {
@@ -26,7 +26,7 @@
 
 .intro{
     position: fixed;
-    z-index: 20;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -147,7 +147,6 @@
 
 // Navigation
 .header__inner{
-    overflow: hidden;
     position: relative;
     height: 100px;
 }
@@ -251,6 +250,10 @@
     margin: 0 auto;
     overflow: hidden;
     animation: botNav 2s forwards 3s ease-in-out;
+}
+
+.menu-block{
+    display: none;
 }
 
 // Arrow
