@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     fileUpload();
     popupQueary();
     mobileMenu();
+    setLocale();
 
 });
 
@@ -502,6 +503,7 @@ function mobileMenu() {
           menu = document.querySelector('.menu'),
           lineRoll = document.querySelectorAll('.roll-menu');
     let isOpen = false;
+    const mobileMedia = window.matchMedia("(max-width: 826px)");
     const html = document.querySelector('html');
 
     menuBtn.addEventListener('click', ()=>{
@@ -529,9 +531,69 @@ function mobileMenu() {
     $('a[id^=btn]').on('click', function(){
         menuBtn.classList.remove('open');
         menu.classList.remove('active');
-        html.style.overflow = 'scroll';
+        if(matchMedia.matches) {
+            html.style.overflow = 'scroll';
+        }
     });
 }
 
 // -------------------------------------------------------------------------------------------------------------------------
 // Localization
+function setLocale() {
+    
+    const localeBtn = document.querySelectorAll('.setlocale-btn');
+    const allLang = ['ru', 'en'];
+
+    localeBtn.forEach((btn)=>{
+
+        btn.addEventListener('click', (e)=>{
+            e.preventDefault();
+            changeURLLanguage(btn);
+        });
+
+    })
+
+    function changeURLLanguage(btn) {
+        let lang = btn.getAttribute('data-lang');
+        location.href = window.location.pathname + '#' + lang;
+        location.reload();
+    }
+
+    function changeLanquage() {
+        let hash = window.location.hash;
+        hash = hash.substr(1);
+        
+        if(!allLang.includes(hash)) {
+            location.href = window.location.pathname + '#en';
+            location.reload();
+        }
+
+        const home = document.querySelectorAll('.lng-home'),
+              about = document.querySelectorAll('.lng-about'),
+              service = document.querySelectorAll('.lng-service'),
+              team = document.querySelectorAll('.lng-team'),
+              contact = document.querySelectorAll('.lng-contact');
+        
+        const fRoll = document.querySelectorAll('.lng-rollOne'),
+              sRoll =  document.querySelectorAll('.lng-rollTwo'),
+              tRoll =  document.querySelectorAll('.lng-rollThree');
+
+        emptyForEach(home,'home',hash);
+        emptyForEach(about,'about',hash);
+        emptyForEach(service,'service',hash);
+        emptyForEach(team,'team',hash);
+        emptyForEach(contact,'contact',hash);
+
+        emptyForEach(fRoll,'rollOne',hash);
+        emptyForEach(sRoll,'rollTwo',hash);
+        emptyForEach(tRoll,'rollThree',hash);
+    }
+
+    changeLanquage();
+}
+
+function emptyForEach(clickLink, attr, hash) {
+    clickLink.forEach((link)=>{
+        link.innerHTML = langArr[attr][hash];  
+    })
+}
