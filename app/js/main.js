@@ -257,7 +257,6 @@ function fullPageScrolling() {
 
     WRAPPER.addEventListener('keydown', (e)=>{
 
-        // e.preventDefault();
         
         if(e.code === 'ArrowUp') scdir = 'down';
         if(e.code === 'ArrowDown') scdir = 'up';
