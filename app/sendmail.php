@@ -11,12 +11,13 @@
     $mail->setLanguage('ru', 'phpmailer/language/');
     $mail->isHTML(true);
 
-    $mail->setFrom('young.bezero@gmail.com', ['name']);
+    $mail->setFrom($_POST['mail'], $_POST['name']);
 
     $mail->addAddress('salesdepartment@sharkit.digital');
 
     $mail->Subject = 'Форма Shark IT Agency';
 
+    $body = '<h1>Contact Form</h1>';
    
     if(trim(!empty($_POST['name']))) {
         $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
