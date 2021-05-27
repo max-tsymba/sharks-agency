@@ -130,5 +130,14 @@
             width: 120px;
         }
     }
+
+    @keyframes localeLeft {
+        from{
+            right: -100%;
+        }
+        to{
+            right: 30px;
+        }
+    }
 }
 
