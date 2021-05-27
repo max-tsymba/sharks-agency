@@ -294,6 +294,7 @@
 .setlocale{
     position: absolute;
     top: 50%;
+    right: -100%;
     transform: translateY(-50%);
     width: 20px;
     animation: localeLeft 2s forwards 3s ease-in-out;
