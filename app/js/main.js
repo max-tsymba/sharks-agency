@@ -568,32 +568,16 @@ function setLocale() {
             location.reload();
         }
 
-        const home = document.querySelectorAll('.lng-home'),
-              about = document.querySelectorAll('.lng-about'),
-              service = document.querySelectorAll('.lng-service'),
-              team = document.querySelectorAll('.lng-team'),
-              contact = document.querySelectorAll('.lng-contact');
-        
-        const fRoll = document.querySelectorAll('.lng-rollOne'),
-              sRoll =  document.querySelectorAll('.lng-rollTwo'),
-              tRoll =  document.querySelectorAll('.lng-rollThree');
-
-        emptyForEach(home,'home',hash);
-        emptyForEach(about,'about',hash);
-        emptyForEach(service,'service',hash);
-        emptyForEach(team,'team',hash);
-        emptyForEach(contact,'contact',hash);
-
-        emptyForEach(fRoll,'rollOne',hash);
-        emptyForEach(sRoll,'rollTwo',hash);
-        emptyForEach(tRoll,'rollThree',hash);
+        for(let key in langArr) {
+            let elem = document.querySelectorAll('.lng-'+key);
+            
+            elem.forEach((block)=>{
+                if(block) {
+                    block.innerHTML = langArr[key][hash];
+                }
+            })
+        }
     }
 
     changeLanquage();
-}
-
-function emptyForEach(clickLink, attr, hash) {
-    clickLink.forEach((link)=>{
-        link.innerHTML = langArr[attr][hash];  
-    })
 }
